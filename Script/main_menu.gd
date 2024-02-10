@@ -1,8 +1,9 @@
 extends Node
 
-
+var mute : boolean;
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	JSON.parse_string(FileAccess.get_file_as_string(preload()))
 	$options.hide();$options/mute.hide();
 
 #func _unhandled_input(event):
@@ -29,4 +30,4 @@ func _on_texture_button_3_button_up():
 
 
 func _on_mute_button_up():
-	pass # Replace with function body.
+	if()

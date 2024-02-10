@@ -228,11 +228,11 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(8, 8)
 
-[node name="TextureButton" type="TextureButton" parent="options/TextureRect3/VBoxContainer"]
+[node name="stats" type="TextureButton" parent="options/TextureRect3/VBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("15_8kas2")
 
-[node name="TextureButton2" type="TextureButton" parent="options/TextureRect3/VBoxContainer"]
+[node name="sound" type="TextureButton" parent="options/TextureRect3/VBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("16_d3773")
 
@@ -240,3 +240,4 @@ texture_normal = ExtResource("16_d3773")
 [connection signal="button_up" from="idle/VBoxContainer/TextureButton" to="." method="_on_texture_button_button_up"]
 [connection signal="button_down" from="idle/VBoxContainer3/TextureButton4" to="." method="_on_texture_button_4_button_down"]
 [connection signal="button_up" from="idle/VBoxContainer3/TextureButton3" to="." method="_on_texture_button_3_button_up"]
+[connection signal="button_up" from="options/mute" to="." method="_on_mute_button_up"]
