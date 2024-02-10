@@ -246,129 +246,132 @@ offset_bottom = 21.35
 scale = Vector2(0.4, 0.3)
 texture = ExtResource("12_jfxv3")
 
-[node name="VFlowContainer" type="HFlowContainer" parent="options/stat"]
+[node name="ScrollContainer" type="ScrollContainer" parent="options/stat"]
 layout_mode = 0
-offset_left = 11.0
-offset_top = 5.0
-offset_right = 253.0
-offset_bottom = 391.0
-scale = Vector2(0.04, 0.06)
+offset_left = 8.42857
+offset_top = 5.3
+offset_right = 364.429
+offset_bottom = 387.3
+scale = Vector2(0.06, 0.06)
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="options/stat/VFlowContainer"]
+[node name="VFlowContainer" type="HFlowContainer" parent="options/stat/ScrollContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="options/stat/VFlowContainer/HBoxContainer2"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="options/stat/ScrollContainer/VFlowContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="options/stat/ScrollContainer/VFlowContainer/HBoxContainer2"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
 text = "Balance:"
 
-[node name="Label2" type="Label" parent="options/stat/VFlowContainer/HBoxContainer2"]
+[node name="Label2" type="Label" parent="options/stat/ScrollContainer/VFlowContainer/HBoxContainer2"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
 text = "0"
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="options/stat/VFlowContainer"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="options/stat/ScrollContainer/VFlowContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="options/stat/VFlowContainer/HBoxContainer3"]
+[node name="Label" type="Label" parent="options/stat/ScrollContainer/VFlowContainer/HBoxContainer3"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
 text = "Balance:"
 
-[node name="Label2" type="Label" parent="options/stat/VFlowContainer/HBoxContainer3"]
+[node name="Label2" type="Label" parent="options/stat/ScrollContainer/VFlowContainer/HBoxContainer3"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
 text = "0"
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="options/stat/VFlowContainer"]
+[node name="HBoxContainer4" type="HBoxContainer" parent="options/stat/ScrollContainer/VFlowContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="options/stat/VFlowContainer/HBoxContainer4"]
+[node name="Label" type="Label" parent="options/stat/ScrollContainer/VFlowContainer/HBoxContainer4"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
 text = "Balance:"
 
-[node name="Label2" type="Label" parent="options/stat/VFlowContainer/HBoxContainer4"]
+[node name="Label2" type="Label" parent="options/stat/ScrollContainer/VFlowContainer/HBoxContainer4"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
 text = "0"
 
-[node name="HBoxContainer5" type="HBoxContainer" parent="options/stat/VFlowContainer"]
+[node name="HBoxContainer5" type="HBoxContainer" parent="options/stat/ScrollContainer/VFlowContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="options/stat/VFlowContainer/HBoxContainer5"]
+[node name="Label" type="Label" parent="options/stat/ScrollContainer/VFlowContainer/HBoxContainer5"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
 text = "Balance:"
 
-[node name="Label2" type="Label" parent="options/stat/VFlowContainer/HBoxContainer5"]
+[node name="Label2" type="Label" parent="options/stat/ScrollContainer/VFlowContainer/HBoxContainer5"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
 text = "0"
 
-[node name="HBoxContainer6" type="HBoxContainer" parent="options/stat/VFlowContainer"]
+[node name="HBoxContainer6" type="HBoxContainer" parent="options/stat/ScrollContainer/VFlowContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="options/stat/VFlowContainer/HBoxContainer6"]
+[node name="Label" type="Label" parent="options/stat/ScrollContainer/VFlowContainer/HBoxContainer6"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
 text = "Balance:"
 
-[node name="Label2" type="Label" parent="options/stat/VFlowContainer/HBoxContainer6"]
+[node name="Label2" type="Label" parent="options/stat/ScrollContainer/VFlowContainer/HBoxContainer6"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
 text = "0"
 
-[node name="HBoxContainer7" type="HBoxContainer" parent="options/stat/VFlowContainer"]
+[node name="HBoxContainer7" type="HBoxContainer" parent="options/stat/ScrollContainer/VFlowContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="options/stat/VFlowContainer/HBoxContainer7"]
+[node name="Label" type="Label" parent="options/stat/ScrollContainer/VFlowContainer/HBoxContainer7"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
 text = "Balance:"
 
-[node name="Label2" type="Label" parent="options/stat/VFlowContainer/HBoxContainer7"]
+[node name="Label2" type="Label" parent="options/stat/ScrollContainer/VFlowContainer/HBoxContainer7"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
 text = "0"
 
-[node name="HBoxContainer8" type="HBoxContainer" parent="options/stat/VFlowContainer"]
+[node name="HBoxContainer8" type="HBoxContainer" parent="options/stat/ScrollContainer/VFlowContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="options/stat/VFlowContainer/HBoxContainer8"]
+[node name="Label" type="Label" parent="options/stat/ScrollContainer/VFlowContainer/HBoxContainer8"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
 text = "Balance:"
 
-[node name="Label2" type="Label" parent="options/stat/VFlowContainer/HBoxContainer8"]
+[node name="Label2" type="Label" parent="options/stat/ScrollContainer/VFlowContainer/HBoxContainer8"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
 text = "0"
 
-[node name="HBoxContainer9" type="HBoxContainer" parent="options/stat/VFlowContainer"]
+[node name="HBoxContainer9" type="HBoxContainer" parent="options/stat/ScrollContainer/VFlowContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="options/stat/VFlowContainer/HBoxContainer9"]
+[node name="Label" type="Label" parent="options/stat/ScrollContainer/VFlowContainer/HBoxContainer9"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
 text = "Balance:"
 
-[node name="Label2" type="Label" parent="options/stat/VFlowContainer/HBoxContainer9"]
+[node name="Label2" type="Label" parent="options/stat/ScrollContainer/VFlowContainer/HBoxContainer9"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
@@ -382,4 +385,3 @@ text = "0"
 [connection signal="button_up" from="options/optionchoice/VBoxContainer/stats" to="." method="_on_stats_button_up"]
 [connection signal="button_up" from="options/optionchoice/VBoxContainer/sound" to="." method="_on_sound_button_up"]
 [connection signal="button_up" from="options/mute" to="." method="_on_mute_button_up"]
-[connection signal="button_up" from="options/stat" to="." method="_on_stat_button_up"]
