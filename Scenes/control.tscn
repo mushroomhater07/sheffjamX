@@ -155,7 +155,6 @@ theme_override_font_sizes/font_size = 106
 text = "Museum Heist"
 
 [node name="options" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1377.0
@@ -171,7 +170,6 @@ grow_vertical = 2
 color = Color(1, 1, 1, 0.270588)
 
 [node name="mute" type="TextureButton" parent="options"]
-visible = false
 layout_mode = 2
 offset_left = 460.0
 offset_top = 145.0
@@ -182,7 +180,6 @@ texture_normal = ExtResource("10_3awx1")
 texture_focused = ExtResource("11_nfp3l")
 
 [node name="TextureRect" type="TextureRect" parent="options"]
-visible = false
 layout_mode = 0
 offset_left = 331.0
 offset_top = -99.0
