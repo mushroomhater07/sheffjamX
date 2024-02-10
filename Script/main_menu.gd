@@ -65,3 +65,7 @@ func mute(change: bool):
 
 func _on_stat_button_up():
 	$options/stat.hide();
+
+
+func _on_button_button_up():
+	pass # Replace with function body.
