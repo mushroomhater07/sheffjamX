@@ -9,8 +9,6 @@ func _ready():
 	#if event.is_action_pressed("ui_accept"):
 		
 
-
-
 func _on_texture_button_2_button_up():
 	pass # Replace with function body.
 
