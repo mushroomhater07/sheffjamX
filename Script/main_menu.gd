@@ -13,3 +13,7 @@ func _unhandled_input(event):
 
 func _on_texture_button_2_button_up():
 	pass # Replace with function body.
+
+
+func _on_texture_button_button_up():
+	pass # Replace with function body.
