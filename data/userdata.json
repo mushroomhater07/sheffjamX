@@ -1,0 +1,22 @@
+{
+  "setting":{
+	"volumne":100
+  },
+  "all_time_stat":{
+	"painting_stolen": 0,
+	"money_earned": 0
+  },
+  "current_stat":{
+	"money": 0,
+	"consumable":[
+	  { "wrench": 0},
+	  { "silent": 0},
+	  { "flashbang": 0},
+	  { "lightout": 0},
+	  { "zipline": 0},
+	  { "camouflage": 0},
+	  { "guard_outfit": 0},
+	  { "stopper": 0}
+	]
+  }
+}
