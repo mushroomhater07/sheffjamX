@@ -54,3 +54,7 @@ func mute(change: bool):
 		else:
 			get_node("options/mute").texture_normal = preload("res://Assets/muted.png")
 	
+
+
+func _on_sound_button_up():
+	pass # Replace with function body.
