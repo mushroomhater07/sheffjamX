@@ -10,15 +10,15 @@ config_version=5
 
 [application]
 
-config/name="Museum"
+config/name="MuseumHeist"
 run/main_scene="res://Scenes/museum.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://Assets/icon.svg"
 
 [display]
 
-window/size/viewport_width=800
-window/size/viewport_height=608
+window/size/viewport_width=1376
+window/size/viewport_height=768
 window/stretch/mode="viewport"
 window/vsync/vsync_mode=0
 

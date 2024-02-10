@@ -1,11 +1,11 @@
 extends Node2D
 
-var max_speed:float = 0.5
+@export var max_speed:float = 0.5
 var current_speed:Vector2 = Vector2(0, 0)
 
 ##### speed increase/decrease per sec
-var acceleration:float = 5
-var deceleration:float = 5
+@export var acceleration:float = 5
+@export var deceleration:float = 5
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
