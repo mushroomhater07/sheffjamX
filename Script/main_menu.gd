@@ -15,7 +15,7 @@ func data_init():
 	#$options/stat/ScrollContainer/VFlowContainer
 	var gameobjecttemplate = preload("res://Scenes/label.tscn")
 	var gameobject1 = gameobjecttemplate.instantiate()
-	$"idle/label placeholder".add_child(.instantiate())
+	$"idle/label placeholder".add_child(gameobject1)
 	#$"idle/lablel placeholder2"
 #func _unhandled_input(event):
 	#if event.is_action_pressed("ui_accept"):
