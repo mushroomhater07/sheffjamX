@@ -5,7 +5,7 @@ var mute : bool;
 func _ready():
 	var datafile :Dictionary = JSON.parse_string(FileAccess.open("res://data/userdata.json",FileAccess.READ).get_as_text())
 	#var datafile = JSON.parse_string(FileAccess.get_file_as_string("res://data/userdata.json"))
-	print(datafile.setting["volume"])
+	print(datafile.setting)
 	$options.hide();$options/mute.hide();
 
 #func _unhandled_input(event):
