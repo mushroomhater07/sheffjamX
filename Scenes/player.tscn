@@ -39,6 +39,9 @@ sprite_frames = SubResource("SpriteFrames_8o440")
 [node name="Camera2D" type="Camera2D" parent="PlayerCharacter"]
 
 [node name="DetectionHitbox" type="Area2D" parent="PlayerCharacter"]
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCharacter/DetectionHitbox"]
 shape = SubResource("CircleShape2D_eefx7")
+
+[connection signal="body_entered" from="PlayerCharacter/DetectionHitbox" to="PlayerCharacter" method="_on_detection_hitbox_body_entered"]

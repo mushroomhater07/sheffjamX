@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bl7kmlkcqf2ya"]
+
+[ext_resource type="Script" path="res://Script/main_menu.gd" id="1_unw8m"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_i6hkt"]
+
+[node name="MainMenu" type="Node"]
+script = ExtResource("1_unw8m")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.490196, 0.180392, 0.376471, 1)
+offset_right = 1380.0
+offset_bottom = 768.0
+texture = SubResource("ViewportTexture_i6hkt")

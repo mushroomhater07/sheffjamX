@@ -50,7 +50,6 @@ func _physics_process(delta):
 	
 	velocity = current_speed
 	move_and_slide()
-	#var collision = move_and_collide(current_speed)
-	#if collision:
-		#velocity = velocity.slide(collision.get_normal())
 	
+func _on_detection_hitbox_body_entered(body):
+	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
