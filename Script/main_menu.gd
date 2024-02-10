@@ -15,10 +15,11 @@ func data_init():
 	mute(false);
 	var gameobjecttemplate = preload("res://Scenes/label.tscn")
 	for key in datafile.all_time_stat:
-		var gameobject1 = gameobjecttemplate.instantiate()
-		gameobject1.setlabel1(str(key))
-		gameobject1.setlabel1(str(datafile.all_time_stat[key]))
-		$options/stat/ScrollContainer/VFlowContainer.add_child(gameobject1)
+		print("index: %s, value: %d" % [key, datafile.all_time_stat[key]])
+		#var gameobject1 = gameobjecttemplate.instantiate()
+		#gameobject1.setlabel1(key)
+		#gameobject1.setlabel1(datafile.all_time_stat[key])
+		#$options/stat/ScrollContainer/VFlowContainer.add_child(gameobject1)
 
 	#$"idle/lablel placeholder2".add_child(gameobject1)
 	#$"idle/lablel placeholder2"
