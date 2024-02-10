@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cc8xg8krjjtpb" path="res://Assets/UI/tile046.png" id="4_806ix"]
 [ext_resource type="Texture2D" uid="uid://dtdx7fci5ntla" path="res://Assets/UI/pcontinue.png" id="5_7ojoi"]
 [ext_resource type="Texture2D" uid="uid://bio00qkduj3y" path="res://Assets/UI/pplay.png" id="5_uud4l"]
-[ext_resource type="Texture2D" uid="uid://dpideyulcmg45" path="res://Assets/UI/tile049.png" id="7_bxmda"]
+[ext_resource type="Texture2D" uid="uid://dpideyulcmg45" path="res://Assets/UI/poptions.png" id="7_bxmda"]
 [ext_resource type="Texture2D" uid="uid://c5e73hrhlbopy" path="res://Assets/UI/tile047.png" id="8_mheyw"]
 [ext_resource type="VideoStream" path="res://Assets/heist.ogv" id="9_1dvh2"]
 [ext_resource type="Texture2D" uid="uid://p8pb573cjnoo" path="res://Assets/New Piskel (2).png" id="10_3awx1"]
