@@ -172,15 +172,6 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 1, 1, 0.270588)
 
-[node name="mute" type="TextureButton" parent="options"]
-layout_mode = 2
-offset_left = 460.0
-offset_top = 145.0
-offset_right = 492.0
-offset_bottom = 177.0
-scale = Vector2(15, 15)
-texture_normal = ExtResource("10_3awx1")
-
 [node name="TextureRect" type="TextureRect" parent="options"]
 layout_mode = 0
 offset_left = 331.0
@@ -236,9 +227,18 @@ texture_normal = ExtResource("15_8kas2")
 layout_mode = 2
 texture_normal = ExtResource("16_d3773")
 
+[node name="mute" type="TextureButton" parent="options"]
+layout_mode = 2
+offset_left = 460.0
+offset_top = 145.0
+offset_right = 492.0
+offset_bottom = 177.0
+scale = Vector2(15, 15)
+texture_normal = ExtResource("10_3awx1")
+
 [connection signal="button_up" from="idle/VBoxContainer/TextureButton2" to="." method="_on_texture_button_2_button_up"]
 [connection signal="button_up" from="idle/VBoxContainer/TextureButton" to="." method="_on_texture_button_button_up"]
 [connection signal="button_down" from="idle/VBoxContainer3/TextureButton4" to="." method="_on_texture_button_4_button_down"]
 [connection signal="button_up" from="idle/VBoxContainer3/TextureButton3" to="." method="_on_texture_button_3_button_up"]
-[connection signal="button_up" from="options/mute" to="." method="_on_mute_button_up"]
 [connection signal="button_up" from="options/TextureRect3/VBoxContainer/sound" to="." method="_on_sound_button_up"]
+[connection signal="button_up" from="options/mute" to="." method="_on_mute_button_up"]
