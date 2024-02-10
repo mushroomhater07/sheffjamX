@@ -13,7 +13,8 @@ func data_init():
 	muted = datafile.setting.mute
 	mute(false);
 	$options/stat/ScrollContainer/VFlowContainer
-	
+	$"idle/label placeholder".add_child()
+	$"idle/lablel placeholder2"
 #func _unhandled_input(event):
 	#if event.is_action_pressed("ui_accept"):
 		
