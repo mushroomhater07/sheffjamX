@@ -8,7 +8,7 @@ func _ready():
 	#var datafile = JSON.parse_string(FileAccess.get_file_as_string("res://data/userdata.json"))
 	muted = datafile.setting.mute
 	mute(false);
-	$options.hide();$options/mute.hide();
+	$options.hide();$options/mute.hide();$options/stat.hide();$options/TextureRect3.hide();
 
 #func _unhandled_input(event):
 	#if event.is_action_pressed("ui_accept"):
