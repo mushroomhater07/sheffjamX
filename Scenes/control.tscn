@@ -1,18 +1,18 @@
 [gd_scene load_steps=14 format=3 uid="uid://cie3fggl5g14u"]
 
 [ext_resource type="Script" path="res://Script/main_menu.gd" id="1_8y7km"]
-[ext_resource type="Texture2D" uid="uid://bqjy6uy37xfvo" path="res://Assets/tile044.png" id="1_i1rhe"]
-[ext_resource type="Texture2D" uid="uid://bg6pwjnipmjun" path="res://Assets/tile042.png" id="2_r40go"]
-[ext_resource type="Texture2D" uid="uid://dmranw3x88i3c" path="res://Assets/tile048.png" id="3_2xymu"]
-[ext_resource type="Texture2D" uid="uid://cc8xg8krjjtpb" path="res://Assets/tile046.png" id="4_806ix"]
-[ext_resource type="Texture2D" uid="uid://dtdx7fci5ntla" path="res://Assets/tile045.png" id="5_7ojoi"]
-[ext_resource type="Texture2D" uid="uid://bio00qkduj3y" path="res://Assets/tile043.png" id="5_uud4l"]
-[ext_resource type="Texture2D" uid="uid://dpideyulcmg45" path="res://Assets/tile049.png" id="7_bxmda"]
-[ext_resource type="Texture2D" uid="uid://c5e73hrhlbopy" path="res://Assets/tile047.png" id="8_mheyw"]
+[ext_resource type="Texture2D" uid="uid://bqjy6uy37xfvo" path="res://Assets/UI/tile044.png" id="1_i1rhe"]
+[ext_resource type="Texture2D" uid="uid://bg6pwjnipmjun" path="res://Assets/UI/tile042.png" id="2_r40go"]
+[ext_resource type="Texture2D" uid="uid://dmranw3x88i3c" path="res://Assets/UI/tile048.png" id="3_2xymu"]
+[ext_resource type="Texture2D" uid="uid://cc8xg8krjjtpb" path="res://Assets/UI/tile046.png" id="4_806ix"]
+[ext_resource type="Texture2D" uid="uid://dtdx7fci5ntla" path="res://Assets/UI/tile045.png" id="5_7ojoi"]
+[ext_resource type="Texture2D" uid="uid://bio00qkduj3y" path="res://Assets/UI/tile043.png" id="5_uud4l"]
+[ext_resource type="Texture2D" uid="uid://dpideyulcmg45" path="res://Assets/UI/tile049.png" id="7_bxmda"]
+[ext_resource type="Texture2D" uid="uid://c5e73hrhlbopy" path="res://Assets/UI/tile047.png" id="8_mheyw"]
 [ext_resource type="VideoStream" path="res://Assets/heist.ogv" id="9_1dvh2"]
 [ext_resource type="Texture2D" uid="uid://p8pb573cjnoo" path="res://Assets/New Piskel (2).png" id="10_3awx1"]
 [ext_resource type="Texture2D" uid="uid://c3qjv8u6x1j7j" path="res://Assets/New Piskel (1).png" id="11_nfp3l"]
-[ext_resource type="Texture2D" uid="uid://chows5gnk824w" path="res://Assets/stat.png" id="12_jfxv3"]
+[ext_resource type="Texture2D" uid="uid://chows5gnk824w" path="res://Assets/UI/stat.png" id="12_jfxv3"]
 
 [node name="main_control" type="Node"]
 script = ExtResource("1_8y7km")
@@ -214,6 +214,8 @@ layout_mode = 2
 
 [node name="TextureButton2" type="TextureButton" parent="options/VBoxContainer"]
 layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="options"]
 
 [connection signal="button_up" from="idle/VBoxContainer/TextureButton2" to="." method="_on_texture_button_2_button_up"]
 [connection signal="button_up" from="idle/VBoxContainer/TextureButton" to="." method="_on_texture_button_button_up"]
