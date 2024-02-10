@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cjj3mn2q8biqn"]
+
+[node name="HBoxContainer2" type="HBoxContainer"]
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "Balance:"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "0"
