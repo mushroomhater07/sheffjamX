@@ -5,7 +5,6 @@ var mute : bool;
 func _ready():
 	#print(str(JSON.parse_string(FileAccess.get_file_as_string(preload("res://data/userdata.json"))).setting.volume))
 	#print(FileAccess.get_file_as_string(preload()))
-	var json_as_text = 
 	var json_as_dict = JSON.parse_string(FileAccess.get_file_as_string("res://data/userdata.json"))
 	if json_as_dict:
 		print(json_as_dict)
