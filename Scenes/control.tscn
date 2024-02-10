@@ -198,4 +198,6 @@ texture = ExtResource("12_jfxv3")
 
 [connection signal="button_up" from="VBoxContainer/TextureButton2" to="." method="_on_texture_button_2_button_up"]
 [connection signal="button_up" from="VBoxContainer/TextureButton" to="." method="_on_texture_button_button_up"]
+[connection signal="button_down" from="VBoxContainer/TextureButton4" to="." method="_on_texture_button_4_button_down"]
 [connection signal="button_up" from="VBoxContainer/TextureButton4" to="." method="_on_texture_button_4_button_up"]
+[connection signal="button_up" from="VBoxContainer/TextureButton3" to="." method="_on_texture_button_3_button_up"]
