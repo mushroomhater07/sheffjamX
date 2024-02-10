@@ -14,6 +14,9 @@ script = ExtResource("1_g5jon")
 [node name="Player" parent="." instance=ExtResource("2_76qo7")]
 position = Vector2(189, 196)
 
+[node name="BottomRight" parent="Player/PlayerCharacter/PlayerCamera/Limits" index="1"]
+position = Vector2(3488, 1984)
+
 [node name="Guard" parent="." instance=ExtResource("3_efud8")]
 position = Vector2(534, 268)
 
@@ -42,3 +45,6 @@ position = Vector2(959, 160)
 
 [node name="Painting7" parent="Paintings" instance=ExtResource("5_36cay")]
 position = Vector2(693, 107)
+
+[editable path="Player"]
+[editable path="Player/PlayerCharacter/PlayerCamera"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://ctta1v4gpeus2"]
+[gd_scene load_steps=10 format=3 uid="uid://ctta1v4gpeus2"]
 
 [ext_resource type="Texture2D" uid="uid://0fyega4djogo" path="res://Assets/tilemap.png" id="1_af7mq"]
 [ext_resource type="Script" path="res://Script/player.gd" id="1_iim0t"]
+[ext_resource type="PackedScene" uid="uid://dgeulhbnaj307" path="res://Scenes/player_camera.tscn" id="3_6tm0j"]
 [ext_resource type="Texture2D" uid="uid://d4je58vlt02cy" path="res://Assets/light.png" id="3_hs1uh"]
 [ext_resource type="PackedScene" uid="uid://c8n57cm8dalnm" path="res://Scenes/Consumables/wrench.tscn" id="4_vb147"]
 
@@ -35,7 +36,7 @@ script = ExtResource("1_iim0t")
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_8o440")
 
-[node name="Camera2D" type="Camera2D" parent="PlayerCharacter"]
+[node name="PlayerCamera" parent="PlayerCharacter" instance=ExtResource("3_6tm0j")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCharacter"]
 shape = SubResource("RectangleShape2D_2jjgf")
