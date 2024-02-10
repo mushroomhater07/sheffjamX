@@ -15,8 +15,12 @@ func data_init():
 	mute(false);
 	#$options/stat/ScrollContainer/VFlowContainer
 	var gameobjecttemplate = preload("res://Scenes/label.tscn")
+	for key in datafile.all_time_stat:
+		var gameobject1 = gameobjecttemplate.instantiate()
+		gameobject1.label = key
+		gameobject1.label_2 = dict[key]
 	print(gameobjecttemplate)
-	var gameobject1 = gameobjecttemplate.instantiate()
+
 	$"idle/lablel placeholder2".add_child(gameobject1)
 	#$"idle/lablel placeholder2"
 #func _unhandled_input(event):
