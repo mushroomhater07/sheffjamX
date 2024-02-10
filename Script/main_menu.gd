@@ -62,4 +62,4 @@ func mute(change: bool):
 
 
 func _on_stat_focus_entered():
-	pass # Replace with function body.
+	$options/stat.hide();
