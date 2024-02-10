@@ -1,6 +1,6 @@
 extends Node
 
-@export var statlabel = []
+
 var muted : bool;
 var datafile :Dictionary;
 # Called when the node enters the scene tree for the first time.
@@ -12,6 +12,7 @@ func data_init():
 	#var datafile = JSON.parse_string(FileAccess.get_file_as_string("res://data/userdata.json"))
 	muted = datafile.setting.mute
 	mute(false);
+	$options/stat/ScrollContainer/VFlowContainer
 	
 #func _unhandled_input(event):
 	#if event.is_action_pressed("ui_accept"):
