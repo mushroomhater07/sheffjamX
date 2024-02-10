@@ -5,8 +5,8 @@ extends Node
 func _ready():
 	$option.hide();$option/mute.hide();
 
-func _unhandled_input(event):
-	if event.is_action_pressed("ui_accept"):
+#func _unhandled_input(event):
+	#if event.is_action_pressed("ui_accept"):
 		
 
 
