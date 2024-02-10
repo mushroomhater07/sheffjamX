@@ -1,5 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://cie3fggl5g14u"]
+[gd_scene load_steps=14 format=3 uid="uid://cie3fggl5g14u"]
 
+[ext_resource type="Script" path="res://Script/main_menu.gd" id="1_8y7km"]
 [ext_resource type="Texture2D" uid="uid://bqjy6uy37xfvo" path="res://Assets/tile044.png" id="1_i1rhe"]
 [ext_resource type="Texture2D" uid="uid://bg6pwjnipmjun" path="res://Assets/tile042.png" id="2_r40go"]
 [ext_resource type="Texture2D" uid="uid://dmranw3x88i3c" path="res://Assets/tile048.png" id="3_2xymu"]
@@ -21,6 +22,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_8y7km")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
 layout_mode = 0
