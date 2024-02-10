@@ -181,38 +181,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="stat" type="TextureButton" parent="options"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -571.5
-offset_top = -282.5
-offset_right = 528.5
-offset_bottom = 403.5
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(35, 20)
-texture_normal = ExtResource("13_46i3i")
-
-[node name="TextureRect" type="TextureRect" parent="options/stat"]
-layout_mode = 0
-offset_left = 9.71429
-offset_top = -3.65
-offset_right = 41.7143
-offset_bottom = 21.35
-scale = Vector2(0.4, 0.3)
-texture = ExtResource("12_jfxv3")
-
-[node name="VFlowContainer" type="VFlowContainer" parent="options/stat"]
-layout_mode = 0
-offset_left = 4.0
-offset_top = 5.0
-offset_right = 28.0
-offset_bottom = 27.0
-
 [node name="optionchoice" type="TextureRect" parent="options"]
 layout_mode = 0
 offset_left = 404.0
@@ -253,12 +221,165 @@ offset_bottom = 177.0
 scale = Vector2(15, 15)
 texture_normal = ExtResource("10_3awx1")
 
+[node name="stat" type="TextureButton" parent="options"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -571.5
+offset_top = -282.5
+offset_right = -539.5
+offset_bottom = -250.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(35, 20)
+texture_normal = ExtResource("13_46i3i")
+
+[node name="TextureRect" type="TextureRect" parent="options/stat"]
+layout_mode = 0
+offset_left = 9.71429
+offset_top = -3.65
+offset_right = 41.7143
+offset_bottom = 21.35
+scale = Vector2(0.4, 0.3)
+texture = ExtResource("12_jfxv3")
+
+[node name="VFlowContainer" type="HFlowContainer" parent="options/stat"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 5.0
+offset_right = 253.0
+offset_bottom = 391.0
+scale = Vector2(0.04, 0.06)
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="options/stat/VFlowContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="options/stat/VFlowContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "Balance:"
+
+[node name="Label2" type="Label" parent="options/stat/VFlowContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "0"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="options/stat/VFlowContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="options/stat/VFlowContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "Balance:"
+
+[node name="Label2" type="Label" parent="options/stat/VFlowContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "0"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="options/stat/VFlowContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="options/stat/VFlowContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "Balance:"
+
+[node name="Label2" type="Label" parent="options/stat/VFlowContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "0"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="options/stat/VFlowContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="options/stat/VFlowContainer/HBoxContainer5"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "Balance:"
+
+[node name="Label2" type="Label" parent="options/stat/VFlowContainer/HBoxContainer5"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "0"
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="options/stat/VFlowContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="options/stat/VFlowContainer/HBoxContainer6"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "Balance:"
+
+[node name="Label2" type="Label" parent="options/stat/VFlowContainer/HBoxContainer6"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "0"
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="options/stat/VFlowContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="options/stat/VFlowContainer/HBoxContainer7"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "Balance:"
+
+[node name="Label2" type="Label" parent="options/stat/VFlowContainer/HBoxContainer7"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "0"
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="options/stat/VFlowContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="options/stat/VFlowContainer/HBoxContainer8"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "Balance:"
+
+[node name="Label2" type="Label" parent="options/stat/VFlowContainer/HBoxContainer8"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "0"
+
+[node name="HBoxContainer9" type="HBoxContainer" parent="options/stat/VFlowContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="options/stat/VFlowContainer/HBoxContainer9"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "Balance:"
+
+[node name="Label2" type="Label" parent="options/stat/VFlowContainer/HBoxContainer9"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "0"
+
 [connection signal="button_up" from="idle/VBoxContainer/TextureButton2" to="." method="_on_texture_button_2_button_up"]
 [connection signal="button_up" from="idle/VBoxContainer/TextureButton" to="." method="_on_texture_button_button_up"]
 [connection signal="button_down" from="idle/VBoxContainer3/TextureButton4" to="." method="_on_texture_button_4_button_down"]
 [connection signal="button_up" from="idle/VBoxContainer3/TextureButton3" to="." method="_on_texture_button_3_button_up"]
 [connection signal="button_up" from="options/ColorRect/Button" to="." method="_on_button_button_up"]
-[connection signal="button_up" from="options/stat" to="." method="_on_stat_button_up"]
 [connection signal="button_up" from="options/optionchoice/VBoxContainer/stats" to="." method="_on_stats_button_up"]
 [connection signal="button_up" from="options/optionchoice/VBoxContainer/sound" to="." method="_on_sound_button_up"]
 [connection signal="button_up" from="options/mute" to="." method="_on_mute_button_up"]
+[connection signal="button_up" from="options/stat" to="." method="_on_stat_button_up"]
