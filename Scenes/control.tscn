@@ -144,6 +144,7 @@ theme_override_font_sizes/font_size = 50
 text = "0"
 
 [node name="option" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 0
 offset_right = 1377.0
@@ -159,7 +160,6 @@ grow_vertical = 2
 color = Color(1, 1, 1, 0.270588)
 
 [node name="mute" type="TextureButton" parent="option"]
-visible = false
 layout_mode = 2
 offset_left = 460.0
 offset_top = 145.0
