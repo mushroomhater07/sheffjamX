@@ -21,3 +21,7 @@ func _on_texture_button_button_up():
 
 func _on_texture_button_4_button_up():
 	pass # Replace with function body.
+
+
+func _on_texture_button_3_button_up():
+	pass # Replace with function body.
