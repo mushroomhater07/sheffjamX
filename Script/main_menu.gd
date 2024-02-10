@@ -32,6 +32,7 @@ func _on_texture_button_3_button_up():
 
 func _on_sound_button_up():
 	$options/mute.show();
+	$options/TextureRect3.hide();
 
 
 
