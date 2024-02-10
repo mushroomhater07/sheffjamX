@@ -3,7 +3,7 @@ extends Node
 var mute : boolean;
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print(JSON.parse_string(FileAccess.get_file_as_string(preload("res://data/userdata.json")))
+	print(JSON.parse_string(FileAccess.get_file_as_string(preload("res://data/userdata.json"))))
 	$options.hide();$options/mute.hide();
 
 #func _unhandled_input(event):
