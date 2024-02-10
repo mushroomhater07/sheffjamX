@@ -54,7 +54,7 @@ offset_right = 3.0
 offset_bottom = 69.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0.0196078, 1)
+color = Color(0.203922, 0.203922, 0.203922, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_direction = 2
@@ -107,61 +107,54 @@ layout_mode = 2
 texture_normal = ExtResource("4_806ix")
 texture_pressed = ExtResource("8_mheyw")
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="."]
-layout_direction = 2
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -344.0
-offset_top = -742.0
-offset_right = -106.0
-offset_bottom = -600.0
-grow_horizontal = 0
-grow_vertical = 0
-alignment = 1
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
 layout_mode = 2
+offset_left = 1019.0
+offset_top = 37.0
+offset_right = 1341.0
+offset_bottom = 106.0
 
-[node name="Label" type="Label" parent="VBoxContainer2/HBoxContainer"]
+[node name="Label" type="Label" parent="HBoxContainer2"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Balance:"
 
-[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer"]
+[node name="Label2" type="Label" parent="HBoxContainer2"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "0"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
+offset_left = 43.0
+offset_top = 37.0
+offset_right = 384.0
+offset_bottom = 106.0
 
-[node name="Label" type="Label" parent="VBoxContainer2/HBoxContainer2"]
+[node name="Label" type="Label" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Balance:"
 
-[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer2"]
+[node name="Label2" type="Label" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "0"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 325.0
-offset_top = 324.0
-offset_right = 1064.0
-offset_bottom = 470.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+offset_left = 323.0
+offset_top = 307.0
+offset_right = 1062.0
+offset_bottom = 453.0
+theme_override_colors/font_color = Color(0.376471, 0.376471, 0.376471, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 106
 text = "Museum Heist"
 
 [node name="option" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 0
 offset_right = 1377.0
