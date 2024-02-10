@@ -8,3 +8,8 @@ func _ready():
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_accept"):
 		get_tree().change_scene_to_file("res://Scenes/museum_game.tscn")
+
+
+
+func _on_texture_button_2_button_up():
+	pass # Replace with function body.
