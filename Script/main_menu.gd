@@ -8,7 +8,7 @@ func _ready():
 	#var datafile = JSON.parse_string(FileAccess.get_file_as_string("res://data/userdata.json"))
 	muted = datafile.setting.mute
 	mute(false);
-	$options.hide();$options/mute.hide();$options/stat.hide();$options/TextureRect3.hide();
+	$options.hide();$options/mute.hide();$options/stat.hide();$options/optionchoice.hide();
 
 #func _unhandled_input(event):
 	#if event.is_action_pressed("ui_accept"):
@@ -24,6 +24,7 @@ func _on_texture_button_button_up():
 
 func _on_texture_button_4_button_down():
 	$options.show();
+	$options/optionchoice.hide();
 
 
 func _on_texture_button_3_button_up():
@@ -32,7 +33,7 @@ func _on_texture_button_3_button_up():
 
 func _on_sound_button_up():
 	$options/mute.show();
-	$options/TextureRect3.hide();
+	$options/optionchoice.hide();
 
 
 
