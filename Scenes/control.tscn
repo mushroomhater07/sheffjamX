@@ -14,10 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://c3qjv8u6x1j7j" path="res://Assets/New Piskel (1).png" id="11_nfp3l"]
 [ext_resource type="Texture2D" uid="uid://chows5gnk824w" path="res://Assets/stat.png" id="12_jfxv3"]
 
-[node name="idle" type="Node"]
+[node name="main_control" type="Node"]
 script = ExtResource("1_8y7km")
 
-[node name="Container" type="Control" parent="."]
+[node name="idle" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -25,7 +25,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Container"]
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="idle"]
 layout_mode = 2
 offset_right = 1393.0
 offset_bottom = 781.0
@@ -34,7 +34,7 @@ autoplay = true
 expand = true
 loop = true
 
-[node name="ColorRect3" type="ColorRect" parent="Container"]
+[node name="ColorRect3" type="ColorRect" parent="idle"]
 layout_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -42,20 +42,20 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 1, 1, 0.270588)
 
-[node name="ColorRect2" type="ColorRect" parent="Container"]
+[node name="ColorRect2" type="ColorRect" parent="idle"]
 layout_mode = 2
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = 3.0
+offset_left = -7.0
 offset_top = -57.0
-offset_right = 3.0
+offset_right = 13.0
 offset_bottom = 69.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.203922, 0.203922, 0.203922, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Container"]
+[node name="VBoxContainer" type="VBoxContainer" parent="idle"]
 layout_direction = 2
 layout_mode = 2
 anchor_left = 1.0
@@ -71,17 +71,17 @@ grow_vertical = 0
 scale = Vector2(7, 7)
 alignment = 1
 
-[node name="TextureButton2" type="TextureButton" parent="Container/VBoxContainer"]
+[node name="TextureButton2" type="TextureButton" parent="idle/VBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("1_i1rhe")
 texture_pressed = ExtResource("5_7ojoi")
 
-[node name="TextureButton" type="TextureButton" parent="Container/VBoxContainer"]
+[node name="TextureButton" type="TextureButton" parent="idle/VBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("2_r40go")
 texture_pressed = ExtResource("5_uud4l")
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="Container"]
+[node name="VBoxContainer3" type="VBoxContainer" parent="idle"]
 layout_direction = 2
 layout_mode = 2
 anchor_top = 1.0
@@ -94,55 +94,55 @@ grow_vertical = 0
 scale = Vector2(7, 7)
 alignment = 1
 
-[node name="TextureButton4" type="TextureButton" parent="Container/VBoxContainer3"]
+[node name="TextureButton4" type="TextureButton" parent="idle/VBoxContainer3"]
 layout_mode = 2
 texture_normal = ExtResource("3_2xymu")
 texture_pressed = ExtResource("7_bxmda")
 
-[node name="TextureButton3" type="TextureButton" parent="Container/VBoxContainer3"]
+[node name="TextureButton3" type="TextureButton" parent="idle/VBoxContainer3"]
 layout_mode = 2
 texture_normal = ExtResource("4_806ix")
 texture_pressed = ExtResource("8_mheyw")
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Container"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="idle"]
 layout_mode = 2
 offset_left = 1019.0
 offset_top = 37.0
 offset_right = 1341.0
 offset_bottom = 106.0
 
-[node name="Label" type="Label" parent="Container/HBoxContainer2"]
+[node name="Label" type="Label" parent="idle/HBoxContainer2"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 text = "Balance:"
 
-[node name="Label2" type="Label" parent="Container/HBoxContainer2"]
+[node name="Label2" type="Label" parent="idle/HBoxContainer2"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 text = "0"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Container"]
+[node name="HBoxContainer" type="HBoxContainer" parent="idle"]
 layout_mode = 2
 offset_left = 43.0
 offset_top = 37.0
 offset_right = 384.0
 offset_bottom = 106.0
 
-[node name="Label" type="Label" parent="Container/HBoxContainer"]
+[node name="Label" type="Label" parent="idle/HBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 text = "Balance:"
 
-[node name="Label2" type="Label" parent="Container/HBoxContainer"]
+[node name="Label2" type="Label" parent="idle/HBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 text = "0"
 
-[node name="Label" type="Label" parent="Container"]
+[node name="Label" type="Label" parent="idle"]
 layout_mode = 2
 offset_left = 323.0
 offset_top = 307.0
@@ -154,14 +154,14 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 106
 text = "Museum Heist"
 
-[node name="option" type="Control" parent="."]
+[node name="options" type="Control" parent="."]
 visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1377.0
 offset_bottom = 767.0
 
-[node name="ColorRect" type="ColorRect" parent="option"]
+[node name="ColorRect" type="ColorRect" parent="options"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -170,7 +170,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 1, 1, 0.270588)
 
-[node name="mute" type="TextureButton" parent="option"]
+[node name="mute" type="TextureButton" parent="options"]
 visible = false
 layout_mode = 2
 offset_left = 460.0
@@ -181,7 +181,7 @@ scale = Vector2(15, 15)
 texture_normal = ExtResource("10_3awx1")
 texture_focused = ExtResource("11_nfp3l")
 
-[node name="TextureRect" type="TextureRect" parent="option"]
+[node name="TextureRect" type="TextureRect" parent="options"]
 visible = false
 layout_mode = 0
 offset_left = 331.0
@@ -191,14 +191,14 @@ offset_bottom = -60.0
 scale = Vector2(15, 7)
 texture = ExtResource("12_jfxv3")
 
-[node name="VFlowContainer" type="VFlowContainer" parent="option/TextureRect"]
+[node name="VFlowContainer" type="VFlowContainer" parent="options/TextureRect"]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 40.0
 offset_right = 47.0
 offset_bottom = 122.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="option"]
+[node name="VBoxContainer" type="VBoxContainer" parent="options"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -212,13 +212,13 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureButton" type="TextureButton" parent="option/VBoxContainer"]
+[node name="TextureButton" type="TextureButton" parent="options/VBoxContainer"]
 layout_mode = 2
 
-[node name="TextureButton2" type="TextureButton" parent="option/VBoxContainer"]
+[node name="TextureButton2" type="TextureButton" parent="options/VBoxContainer"]
 layout_mode = 2
 
-[connection signal="button_up" from="Container/VBoxContainer/TextureButton2" to="." method="_on_texture_button_2_button_up"]
-[connection signal="button_up" from="Container/VBoxContainer/TextureButton" to="." method="_on_texture_button_button_up"]
-[connection signal="button_down" from="Container/VBoxContainer3/TextureButton4" to="." method="_on_texture_button_4_button_down"]
-[connection signal="button_up" from="Container/VBoxContainer3/TextureButton3" to="." method="_on_texture_button_3_button_up"]
+[connection signal="button_up" from="idle/VBoxContainer/TextureButton2" to="." method="_on_texture_button_2_button_up"]
+[connection signal="button_up" from="idle/VBoxContainer/TextureButton" to="." method="_on_texture_button_button_up"]
+[connection signal="button_down" from="idle/VBoxContainer3/TextureButton4" to="." method="_on_texture_button_4_button_down"]
+[connection signal="button_up" from="idle/VBoxContainer3/TextureButton3" to="." method="_on_texture_button_3_button_up"]
