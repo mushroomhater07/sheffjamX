@@ -5,14 +5,23 @@
 [node name="HBoxContainer2" type="HBoxContainer"]
 script = ExtResource("1_lgfei")
 
-[node name="Label" type="Label" parent="."]
+[node name="Control" type="Control" parent="."]
 layout_mode = 2
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 2
+offset_left = -242.0
+offset_right = -37.0
+offset_bottom = 69.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
 text = "Balance:"
 
-[node name="Label2" type="Label" parent="."]
+[node name="Label2" type="Label" parent="Control"]
 layout_mode = 2
+offset_left = -33.0
+offset_right = -4.0
+offset_bottom = 69.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
 text = "0"
