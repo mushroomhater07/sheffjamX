@@ -3,9 +3,9 @@ extends Node
 var mute : bool;
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var datafile = JSON.parse_string(FileAccess.open("res://data/userdata.json",FileAccess.READ).get_as_text())
+	var datafile :Dictionary = JSON.parse_string(FileAccess.open("res://data/userdata.json",FileAccess.READ).get_as_text())
 	#var datafile = JSON.parse_string(FileAccess.get_file_as_string("res://data/userdata.json"))
-	print(datafile)
+	print(datafile.itemData["setting"])
 	$options.hide();$options/mute.hide();
 
 #func _unhandled_input(event):
