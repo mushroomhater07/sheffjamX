@@ -13,15 +13,14 @@ func data_init():
 	#var datafile = JSON.parse_string(FileAccess.get_file_as_string("res://data/userdata.json"))
 	muted = datafile.setting.mute
 	mute(false);
-	#$options/stat/ScrollContainer/VFlowContainer
 	var gameobjecttemplate = preload("res://Scenes/label.tscn")
 	for key in datafile.all_time_stat:
 		var gameobject1 = gameobjecttemplate.instantiate()
 		gameobject1.label = key
 		gameobject1.label_2 = datafile.all_time_stat[key]
-	print(gameobjecttemplate)
+		$options/stat/ScrollContainer/VFlowContainer.add_child(gameobject1)
 
-	$"idle/lablel placeholder2".add_child(gameobject1)
+	#$"idle/lablel placeholder2".add_child(gameobject1)
 	#$"idle/lablel placeholder2"
 #func _unhandled_input(event):
 	#if event.is_action_pressed("ui_accept"):
