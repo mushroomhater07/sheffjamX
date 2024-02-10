@@ -69,4 +69,4 @@ func _on_stat_button_up():
 
 
 func _on_button_button_up():
-	$options.hide();$options/mute.hide();$options/stat.hide();.$options/optionchoicehide();
+	$options.hide();$options/mute.hide();$options/stat.hide();$options/optionchoice.hide();
