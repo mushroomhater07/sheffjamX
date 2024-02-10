@@ -24,7 +24,7 @@ func _on_texture_button_button_up():
 
 func _on_texture_button_4_button_down():
 	$options.show();
-	$options/optionchoice.hide();
+	$options/optionchoice.show();
 
 
 func _on_texture_button_3_button_up():
