@@ -3,7 +3,7 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$option.hide();$option/mute.hide();
+	$options.hide();$options/mute.hide();
 
 #func _unhandled_input(event):
 	#if event.is_action_pressed("ui_accept"):
@@ -18,7 +18,7 @@ func _on_texture_button_button_up():
 
 
 func _on_texture_button_4_button_down():
-	$option.show();
+	$options.show();
 
 
 func _on_texture_button_3_button_up():
