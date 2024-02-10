@@ -10,9 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://dpideyulcmg45" path="res://Assets/tile049.png" id="7_bxmda"]
 [ext_resource type="Texture2D" uid="uid://c5e73hrhlbopy" path="res://Assets/tile047.png" id="8_mheyw"]
 [ext_resource type="VideoStream" path="res://heist.ogv" id="9_1dvh2"]
-[ext_resource type="Texture2D" uid="uid://p8pb573cjnoo" path="res://New Piskel (2).png" id="10_3awx1"]
-[ext_resource type="Texture2D" uid="uid://c3qjv8u6x1j7j" path="res://New Piskel (1).png" id="11_nfp3l"]
-[ext_resource type="Texture2D" uid="uid://chows5gnk824w" path="res://stat.png" id="12_jfxv3"]
+[ext_resource type="Texture2D" uid="uid://p8pb573cjnoo" path="res://Assets/New Piskel (2).png" id="10_3awx1"]
+[ext_resource type="Texture2D" uid="uid://c3qjv8u6x1j7j" path="res://Assets/New Piskel (1).png" id="11_nfp3l"]
+[ext_resource type="Texture2D" uid="uid://chows5gnk824w" path="res://Assets/stat.png" id="12_jfxv3"]
 
 [node name="idle" type="Control"]
 texture_filter = 1
@@ -208,6 +208,12 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TextureButton" type="TextureButton" parent="option/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureButton2" type="TextureButton" parent="option/VBoxContainer"]
+layout_mode = 2
 
 [connection signal="button_up" from="VBoxContainer/TextureButton2" to="." method="_on_texture_button_2_button_up"]
 [connection signal="button_up" from="VBoxContainer/TextureButton" to="." method="_on_texture_button_button_up"]
