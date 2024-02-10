@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://duh6x1gbmkjqa"]
+[gd_scene load_steps=6 format=3 uid="uid://duh6x1gbmkjqa"]
 
 [ext_resource type="Script" path="res://Scenes/museum_game.gd" id="1_g5jon"]
 [ext_resource type="PackedScene" uid="uid://dt2emwiooogb8" path="res://Scenes/museum.tscn" id="1_i5tuv"]
 [ext_resource type="PackedScene" uid="uid://ctta1v4gpeus2" path="res://Scenes/player.tscn" id="2_76qo7"]
 [ext_resource type="PackedScene" uid="uid://bewl7m2ieg40r" path="res://Scenes/guard.tscn" id="3_efud8"]
+[ext_resource type="PackedScene" uid="uid://wt68373fb0o2" path="res://Scenes/painting.tscn" id="5_36cay"]
 
 [node name="MuseumGame" type="Node2D"]
 script = ExtResource("1_g5jon")
@@ -11,6 +12,30 @@ script = ExtResource("1_g5jon")
 [node name="Museum" parent="." instance=ExtResource("1_i5tuv")]
 
 [node name="Player" parent="." instance=ExtResource("2_76qo7")]
-position = Vector2(240, 152)
+position = Vector2(189, 196)
 
 [node name="Guard" parent="." instance=ExtResource("3_efud8")]
+position = Vector2(534, 268)
+
+[node name="Paintings" type="Node" parent="."]
+
+[node name="Painting" parent="Paintings" instance=ExtResource("5_36cay")]
+position = Vector2(156, 609)
+
+[node name="Painting2" parent="Paintings" instance=ExtResource("5_36cay")]
+position = Vector2(723, 642)
+
+[node name="Painting3" parent="Paintings" instance=ExtResource("5_36cay")]
+position = Vector2(1062, 680)
+
+[node name="Painting4" parent="Paintings" instance=ExtResource("5_36cay")]
+position = Vector2(948, 452)
+
+[node name="Painting5" parent="Paintings" instance=ExtResource("5_36cay")]
+position = Vector2(1253, 371)
+
+[node name="Painting6" parent="Paintings" instance=ExtResource("5_36cay")]
+position = Vector2(959, 160)
+
+[node name="Painting7" parent="Paintings" instance=ExtResource("5_36cay")]
+position = Vector2(693, 107)

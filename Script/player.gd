@@ -1,6 +1,9 @@
 extends CharacterBody2D
+class_name Player
 
-@export var max_speed:float = 500
+
+
+@export var max_speed:float = 300
 var current_speed:Vector2 = Vector2(0, 0)
 
 ##### speed increase/decrease per sec

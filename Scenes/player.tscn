@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://ctta1v4gpeus2"]
+[gd_scene load_steps=7 format=3 uid="uid://ctta1v4gpeus2"]
 
 [ext_resource type="Texture2D" uid="uid://0fyega4djogo" path="res://Assets/tilemap.png" id="1_af7mq"]
 [ext_resource type="Script" path="res://Script/player.gd" id="1_iim0t"]
@@ -21,6 +21,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_eefx7"]
+radius = 24.0208
+
 [node name="Player" type="Node2D"]
 
 [node name="PlayerCharacter" type="CharacterBody2D" parent="."]
@@ -32,3 +35,10 @@ shape = SubResource("RectangleShape2D_2jjgf")
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="PlayerCharacter"]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_8o440")
+
+[node name="Camera2D" type="Camera2D" parent="PlayerCharacter"]
+
+[node name="DetectionHitbox" type="Area2D" parent="PlayerCharacter"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCharacter/DetectionHitbox"]
+shape = SubResource("CircleShape2D_eefx7")
