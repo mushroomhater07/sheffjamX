@@ -39,12 +39,12 @@ func _on_mute_button_up():
 func mute():
 	if(muted):
 		muted = false
-		get_node("options/mute").set_normal_texture(preload("res://Assets/nmuted.png"))
+		get_node("options/mute").texture_normal = preload("res://Assets/nmuted.png")
 		datafile.setting.mute = false
 		FileAccess.open("res://data/userdata.json", FileAccess.WRITE).store_string ( JSON.stringify(datafile))
 	else:
 		muted = true
-		get_node("options/mute").set_normal_texture(preload("res://Assets/muted.png"))
+		get_node("options/mute").texture_normal = preload("res://Assets/muted.png")
 		datafile.setting.mute = true
 		FileAccess.open("res://data/userdata.json", FileAccess.WRITE).store_string ( JSON.stringify(datafile))
 		
