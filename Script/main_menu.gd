@@ -68,4 +68,4 @@ func _on_stat_button_up():
 
 
 func _on_button_button_up():
-	pass # Replace with function body.
+	$options.hide();$options/mute.hide();$options/stat.hide();$options/TextureRect3.hide();

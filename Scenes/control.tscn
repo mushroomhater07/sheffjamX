@@ -172,6 +172,15 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 1, 1, 0.270588)
 
+[node name="Button" type="Button" parent="options/ColorRect"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="stat" type="TextureButton" parent="options"]
 layout_mode = 1
 anchors_preset = 8
@@ -205,7 +214,6 @@ offset_right = 28.0
 offset_bottom = 27.0
 
 [node name="TextureRect3" type="TextureRect" parent="options"]
-visible = false
 layout_mode = 0
 offset_left = 404.0
 offset_top = 135.0
@@ -237,7 +245,6 @@ layout_mode = 2
 texture_normal = ExtResource("16_d3773")
 
 [node name="mute" type="TextureButton" parent="options"]
-visible = false
 layout_mode = 2
 offset_left = 460.0
 offset_top = 145.0
@@ -250,6 +257,7 @@ texture_normal = ExtResource("10_3awx1")
 [connection signal="button_up" from="idle/VBoxContainer/TextureButton" to="." method="_on_texture_button_button_up"]
 [connection signal="button_down" from="idle/VBoxContainer3/TextureButton4" to="." method="_on_texture_button_4_button_down"]
 [connection signal="button_up" from="idle/VBoxContainer3/TextureButton3" to="." method="_on_texture_button_3_button_up"]
+[connection signal="button_up" from="options/ColorRect/Button" to="." method="_on_button_button_up"]
 [connection signal="button_up" from="options/stat" to="." method="_on_stat_button_up"]
 [connection signal="button_up" from="options/TextureRect3/VBoxContainer/sound" to="." method="_on_sound_button_up"]
 [connection signal="button_up" from="options/mute" to="." method="_on_mute_button_up"]
