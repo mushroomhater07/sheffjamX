@@ -33,6 +33,7 @@ func _physics_process(delta):
 
 	
 func init(new_target):
+	print(new_target)
 	target = new_target
 
 func _on_timer_timeout():
