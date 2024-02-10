@@ -13,5 +13,4 @@ func setlabel1(text1):
 #func setlabel2(text1 : String):
 	#label_2.text = text1
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+
