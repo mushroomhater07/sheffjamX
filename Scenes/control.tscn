@@ -153,7 +153,6 @@ theme_override_font_sizes/font_size = 50
 text = "0"
 
 [node name="option" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 0
 offset_right = 1377.0
