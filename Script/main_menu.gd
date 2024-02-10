@@ -12,9 +12,9 @@ func data_init():
 	#var datafile = JSON.parse_string(FileAccess.get_file_as_string("res://data/userdata.json"))
 	muted = datafile.setting.mute
 	mute(false);
-	$options/stat/ScrollContainer/VFlowContainer
-	$"idle/label placeholder".add_child(preload("res://Scenes/label.tscn"))
-	$"idle/lablel placeholder2"
+	#$options/stat/ScrollContainer/VFlowContainer
+	$"idle/label placeholder".add_child(preload("res://Scenes/label.tscn").instantiate())
+	#$"idle/lablel placeholder2"
 #func _unhandled_input(event):
 	#if event.is_action_pressed("ui_accept"):
 		
