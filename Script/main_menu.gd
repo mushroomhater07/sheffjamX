@@ -4,7 +4,7 @@ var mute : bool;
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#print(str(JSON.parse_string(FileAccess.get_file_as_string(preload("res://data/userdata.json"))).setting.volume))
-	print(FileAccess.get_file_as_string(preload("res://data/userdata.json"))
+	print(FileAccess.get_file_as_string(preload("res://data/userdata.json")))
 	$options.hide();$options/mute.hide();
 
 #func _unhandled_input(event):
