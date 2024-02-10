@@ -73,4 +73,4 @@ func _on_button_button_up():
 
 
 func _on_stats_button_up():
-	$options/stat.show();
+	$options/stat.show();$options/optionchoice.hide();
