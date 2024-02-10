@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://duh6x1gbmkjqa"]
+
+[ext_resource type="Script" path="res://Scenes/museum_game.gd" id="1_g5jon"]
+[ext_resource type="PackedScene" uid="uid://dt2emwiooogb8" path="res://Scenes/museum.tscn" id="1_i5tuv"]
+[ext_resource type="PackedScene" uid="uid://ctta1v4gpeus2" path="res://Scenes/player.tscn" id="2_76qo7"]
+[ext_resource type="PackedScene" uid="uid://bewl7m2ieg40r" path="res://Scenes/guard.tscn" id="3_efud8"]
+
+[node name="MuseumGame" type="Node2D"]
+script = ExtResource("1_g5jon")
+
+[node name="Museum" parent="." instance=ExtResource("1_i5tuv")]
+
+[node name="Player" parent="." instance=ExtResource("2_76qo7")]
+position = Vector2(240, 152)
+
+[node name="Guard" parent="." instance=ExtResource("3_efud8")]

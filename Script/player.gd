@@ -1,11 +1,11 @@
-extends Node2D
+extends CharacterBody2D
 
-@export var max_speed:float = 0.5
+@export var max_speed:float = 500
 var current_speed:Vector2 = Vector2(0, 0)
 
 ##### speed increase/decrease per sec
-@export var acceleration:float = 5
-@export var deceleration:float = 5
+@export var acceleration:float = 10000
+@export var deceleration:float = 10000
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,7 +13,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _physics_process(delta):
 	##### x, y
 	var frame_speed_vector:Vector2 = Vector2()
 	var nothing_pressed:bool = true
@@ -44,5 +44,10 @@ func _process(delta):
 	if scalar_speed > max_speed:
 		var max_scale:float = scalar_speed/max_speed
 		current_speed /= max_scale
-	position += current_speed
+	
+	velocity = current_speed
+	move_and_slide()
+	#var collision = move_and_collide(current_speed)
+	#if collision:
+		#velocity = velocity.slide(collision.get_normal())
 	

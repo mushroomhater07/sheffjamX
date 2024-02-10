@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://bewl7m2ieg40r"]
+
+[ext_resource type="Script" path="res://Script/patrol.gd" id="1_y750v"]
+[ext_resource type="Texture2D" uid="uid://byykiywypqnx6" path="res://Assets/icon.svg" id="2_6sd0l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x5v47"]
+size = Vector2(128, 128)
+
+[node name="Guard" type="Node2D"]
+
+[node name="patrol" type="CharacterBody2D" parent="."]
+position = Vector2(296, 120)
+scale = Vector2(0.4, 0.4)
+collision_layer = 2
+script = ExtResource("1_y750v")
+
+[node name="Sprite2D" type="Sprite2D" parent="patrol"]
+texture = ExtResource("2_6sd0l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="patrol"]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_x5v47")
+
+[node name="Navigation2D" type="Node2D" parent="patrol"]
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="patrol/Navigation2D"]
+
+[node name="Timer" type="Timer" parent="patrol/Navigation2D"]
+autostart = true
+
+[connection signal="timeout" from="patrol/Navigation2D/Timer" to="patrol" method="_on_timer_timeout"]

@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var target: Node2D
 
+
 var speed = 100
 var acceleration = 7
 
@@ -17,6 +18,8 @@ func _physics_process(delta):
 	move_and_slide()
 
 
+func init(new_target):
+	target = new_target
 
 func _on_timer_timeout():
 	navigation_agent.target_position = target.global_position
