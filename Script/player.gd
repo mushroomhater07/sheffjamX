@@ -2,7 +2,6 @@ extends CharacterBody2D
 class_name Player
 
 
-
 @export var max_speed:float = 300
 var current_speed:Vector2 = Vector2(0, 0)
 
@@ -53,3 +52,4 @@ func _physics_process(delta):
 	
 func _on_detection_hitbox_body_entered(body):
 	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
+

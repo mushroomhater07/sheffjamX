@@ -8,7 +8,6 @@ var acceleration = 7
 var state : State
 
 @onready var navigation_agent: NavigationAgent2D = $Navigation2D/NavigationAgent2D
-@onready var line2d : Line2D = $Line2D
 @onready var detectionArea : Area2D = $DetectionArea
 
 var patrol_position : Vector2

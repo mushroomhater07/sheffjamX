@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8n57cm8dalnm"]
+
+[ext_resource type="Script" path="res://Script/Consumables/wrench.gd" id="1_5d5vq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fefoe"]
+radius = 47.0
+
+[node name="Wrench" type="Node2D"]
+script = ExtResource("1_5d5vq")
+
+[node name="UseRadius" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UseRadius"]
+shape = SubResource("CircleShape2D_fefoe")
