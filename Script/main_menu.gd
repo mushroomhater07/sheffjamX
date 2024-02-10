@@ -32,10 +32,18 @@ func _on_texture_button_3_button_up():
 
 
 func _on_sound_button_up():
-	$options/mute.show();
-	$options/optionchoice.hide();
+	$options/mute.show();$options/optionchoice.hide();
+
+func _on_stat_button_up():
+	$options/stat.hide();$options.hide();
 
 
+func _on_button_button_up():
+	$options.hide();$options/mute.hide();$options/stat.hide();$options/optionchoice.hide();
+
+
+func _on_stats_button_up():
+	$options/stat.show();$options/optionchoice.hide();
 
 func _on_mute_button_up():
 	mute(true);
@@ -64,13 +72,4 @@ func mute(change: bool):
 
 
 
-func _on_stat_button_up():
-	$options/stat.hide();
 
-
-func _on_button_button_up():
-	$options.hide();$options/mute.hide();$options/stat.hide();$options/optionchoice.hide();
-
-
-func _on_stats_button_up():
-	$options/stat.show();$options/optionchoice.hide();
