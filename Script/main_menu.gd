@@ -30,6 +30,8 @@ func _on_texture_button_3_button_up():
 	pass # Replace with function body.
 
 
+func _on_sound_button_up():
+	$options/mute.show();
 
 
 
@@ -56,5 +58,3 @@ func mute(change: bool):
 	
 
 
-func _on_sound_button_up():
-	pass # Replace with function body.

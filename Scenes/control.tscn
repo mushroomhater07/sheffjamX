@@ -241,3 +241,4 @@ texture_normal = ExtResource("16_d3773")
 [connection signal="button_down" from="idle/VBoxContainer3/TextureButton4" to="." method="_on_texture_button_4_button_down"]
 [connection signal="button_up" from="idle/VBoxContainer3/TextureButton3" to="." method="_on_texture_button_3_button_up"]
 [connection signal="button_up" from="options/mute" to="." method="_on_mute_button_up"]
+[connection signal="button_up" from="options/TextureRect3/VBoxContainer/sound" to="." method="_on_sound_button_up"]
