@@ -1,11 +1,12 @@
 extends Node
 
-var mute : bool;
+var muted : bool;
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var datafile :Dictionary = JSON.parse_string(FileAccess.open("res://data/userdata.json",FileAccess.READ).get_as_text())
 	#var datafile = JSON.parse_string(FileAccess.get_file_as_string("res://data/userdata.json"))
-	print(bool(datafile.setting.mute))
+	muted = datafile.setting.mute
+	mute();
 	$options.hide();$options/mute.hide();
 
 #func _unhandled_input(event):
@@ -34,3 +35,5 @@ func _on_texture_button_3_button_up():
 func _on_mute_button_up():
 	#if()
 	pass
+func mute():
+	if(muted)
