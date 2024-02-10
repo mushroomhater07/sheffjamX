@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cie3fggl5g14u"]
+[gd_scene load_steps=16 format=3 uid="uid://cie3fggl5g14u"]
 
 [ext_resource type="Script" path="res://Script/main_menu.gd" id="1_8y7km"]
 [ext_resource type="Texture2D" uid="uid://bqjy6uy37xfvo" path="res://Assets/UI/continue.png" id="1_i1rhe"]
@@ -12,7 +12,6 @@
 [ext_resource type="VideoStream" path="res://Assets/heist.ogv" id="9_1dvh2"]
 [ext_resource type="Texture2D" uid="uid://p8pb573cjnoo" path="res://Assets/nmuted.png" id="10_3awx1"]
 [ext_resource type="Texture2D" uid="uid://chows5gnk824w" path="res://Assets/UI/stat.png" id="12_jfxv3"]
-[ext_resource type="Texture2D" uid="uid://dinfy3yv2shvu" path="res://Assets/UI/ezgif-7-0fe6a2cf0d-png-32x32-sprite-png/tile001.png" id="13_46i3i"]
 [ext_resource type="Texture2D" uid="uid://dvugk6ik65dc8" path="res://Assets/UI/ezgif-7-0fe6a2cf0d-png-32x32-sprite-png/tile000.png" id="14_37y0o"]
 [ext_resource type="Texture2D" uid="uid://f8s3dvjvdhkp" path="res://Assets/UI/stat (2).png" id="15_8kas2"]
 [ext_resource type="Texture2D" uid="uid://c1ny5pg4h5b13" path="res://Assets/UI/sound.png" id="16_d3773"]
@@ -172,13 +171,12 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 1, 1, 0.270588)
 
-[node name="stat" type="TextureRect" parent="options"]
+[node name="stat" type="TextureButton" parent="options"]
 layout_mode = 0
 offset_left = 133.0
 offset_top = 52.0
 offset_right = 1245.0
 offset_bottom = 742.0
-texture = ExtResource("13_46i3i")
 
 [node name="TextureRect" type="TextureRect" parent="options/stat"]
 layout_mode = 0
