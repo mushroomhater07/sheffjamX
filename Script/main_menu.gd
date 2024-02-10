@@ -16,7 +16,7 @@ func data_init():
 	var gameobjecttemplate = preload("res://Scenes/label.tscn")
 	for key in datafile.all_time_stat:
 		var gameobject1 = gameobjecttemplate.instantiate()
-		print(gameobject1.get_parent_control())
+		print(gameobject1.get_control())
 		#gameobject1.control.get_node("")label = key
 		#gameobject1.label_2 = datafile.all_time_stat[key]
 		$options/stat/ScrollContainer/VFlowContainer.add_child(gameobject1)
