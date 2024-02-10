@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cie3fggl5g14u"]
+[gd_scene load_steps=17 format=3 uid="uid://cie3fggl5g14u"]
 
 [ext_resource type="Script" path="res://Script/main_menu.gd" id="1_8y7km"]
 [ext_resource type="Texture2D" uid="uid://bqjy6uy37xfvo" path="res://Assets/UI/continue.png" id="1_i1rhe"]
@@ -12,6 +12,7 @@
 [ext_resource type="VideoStream" path="res://Assets/heist.ogv" id="9_1dvh2"]
 [ext_resource type="Texture2D" uid="uid://p8pb573cjnoo" path="res://Assets/nmuted.png" id="10_3awx1"]
 [ext_resource type="Texture2D" uid="uid://chows5gnk824w" path="res://Assets/UI/stat.png" id="12_jfxv3"]
+[ext_resource type="Texture2D" uid="uid://dinfy3yv2shvu" path="res://Assets/UI/ezgif-7-0fe6a2cf0d-png-32x32-sprite-png/tile001.png" id="13_46i3i"]
 [ext_resource type="Texture2D" uid="uid://dvugk6ik65dc8" path="res://Assets/UI/ezgif-7-0fe6a2cf0d-png-32x32-sprite-png/tile000.png" id="14_37y0o"]
 [ext_resource type="Texture2D" uid="uid://f8s3dvjvdhkp" path="res://Assets/UI/stat (2).png" id="15_8kas2"]
 [ext_resource type="Texture2D" uid="uid://c1ny5pg4h5b13" path="res://Assets/UI/sound.png" id="16_d3773"]
@@ -172,27 +173,36 @@ grow_vertical = 2
 color = Color(1, 1, 1, 0.270588)
 
 [node name="stat" type="TextureButton" parent="options"]
-layout_mode = 0
-offset_left = 133.0
-offset_top = 52.0
-offset_right = 1245.0
-offset_bottom = 742.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -571.5
+offset_top = -282.5
+offset_right = 528.5
+offset_bottom = 403.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(35, 20)
+texture_normal = ExtResource("13_46i3i")
 
 [node name="TextureRect" type="TextureRect" parent="options/stat"]
 layout_mode = 0
-offset_left = 307.0
-offset_top = -56.0
-offset_right = 339.0
-offset_bottom = -31.0
-scale = Vector2(15, 7)
+offset_left = 9.71429
+offset_top = -3.65
+offset_right = 41.7143
+offset_bottom = 21.35
+scale = Vector2(0.4, 0.3)
 texture = ExtResource("12_jfxv3")
 
-[node name="VFlowContainer" type="VFlowContainer" parent="options/stat/TextureRect"]
+[node name="VFlowContainer" type="VFlowContainer" parent="options/stat"]
 layout_mode = 0
-offset_left = -11.0
-offset_top = 29.2857
-offset_right = 47.0
-offset_bottom = 95.2857
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 28.0
+offset_bottom = 27.0
 
 [node name="TextureRect3" type="TextureRect" parent="options"]
 visible = false
@@ -240,6 +250,6 @@ texture_normal = ExtResource("10_3awx1")
 [connection signal="button_up" from="idle/VBoxContainer/TextureButton" to="." method="_on_texture_button_button_up"]
 [connection signal="button_down" from="idle/VBoxContainer3/TextureButton4" to="." method="_on_texture_button_4_button_down"]
 [connection signal="button_up" from="idle/VBoxContainer3/TextureButton3" to="." method="_on_texture_button_3_button_up"]
-[connection signal="focus_entered" from="options/stat" to="." method="_on_stat_focus_entered"]
+[connection signal="button_up" from="options/stat" to="." method="_on_stat_button_up"]
 [connection signal="button_up" from="options/TextureRect3/VBoxContainer/sound" to="." method="_on_sound_button_up"]
 [connection signal="button_up" from="options/mute" to="." method="_on_mute_button_up"]
