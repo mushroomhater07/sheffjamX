@@ -14,18 +14,11 @@
 [ext_resource type="Texture2D" uid="uid://c3qjv8u6x1j7j" path="res://Assets/New Piskel (1).png" id="11_nfp3l"]
 [ext_resource type="Texture2D" uid="uid://chows5gnk824w" path="res://Assets/stat.png" id="12_jfxv3"]
 
-[node name="idle" type="Control"]
-texture_filter = 1
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="idle" type="Node"]
 script = ExtResource("1_8y7km")
 
 [node name="Container" type="Control" parent="."]
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
