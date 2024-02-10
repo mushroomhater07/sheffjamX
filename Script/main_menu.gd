@@ -18,7 +18,7 @@ func data_init():
 	for key in datafile.all_time_stat:
 		var gameobject1 = gameobjecttemplate.instantiate()
 		gameobject1.label = key
-		gameobject1.label_2 = dict[key]
+		gameobject1.label_2 = datafile.all_time_stat[key]
 	print(gameobjecttemplate)
 
 	$"idle/lablel placeholder2".add_child(gameobject1)
