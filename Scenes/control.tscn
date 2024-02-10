@@ -172,31 +172,32 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 1, 1, 0.270588)
 
-[node name="TextureRect" type="TextureRect" parent="options"]
+[node name="stat" type="TextureRect" parent="options"]
 layout_mode = 0
-offset_left = 331.0
-offset_top = -99.0
-offset_right = 376.0
-offset_bottom = -60.0
+offset_left = 133.0
+offset_top = 52.0
+offset_right = 1245.0
+offset_bottom = 742.0
+texture = ExtResource("13_46i3i")
+
+[node name="TextureRect" type="TextureRect" parent="options/stat"]
+layout_mode = 0
+offset_left = 307.0
+offset_top = -56.0
+offset_right = 339.0
+offset_bottom = -31.0
 scale = Vector2(15, 7)
 texture = ExtResource("12_jfxv3")
 
-[node name="VFlowContainer" type="VFlowContainer" parent="options/TextureRect"]
+[node name="VFlowContainer" type="VFlowContainer" parent="options/stat/TextureRect"]
 layout_mode = 0
-offset_left = 1.0
-offset_top = 40.0
+offset_left = -11.0
+offset_top = 29.2857
 offset_right = 47.0
-offset_bottom = 122.0
-
-[node name="TextureRect2" type="TextureRect" parent="options"]
-layout_mode = 0
-offset_left = 221.0
-offset_top = 30.0
-offset_right = 1223.0
-offset_bottom = 739.0
-texture = ExtResource("13_46i3i")
+offset_bottom = 95.2857
 
 [node name="TextureRect3" type="TextureRect" parent="options"]
+visible = false
 layout_mode = 0
 offset_left = 404.0
 offset_top = 135.0
@@ -228,6 +229,7 @@ layout_mode = 2
 texture_normal = ExtResource("16_d3773")
 
 [node name="mute" type="TextureButton" parent="options"]
+visible = false
 layout_mode = 2
 offset_left = 460.0
 offset_top = 145.0
