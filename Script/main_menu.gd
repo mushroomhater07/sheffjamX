@@ -14,6 +14,7 @@ func data_init():
 	mute(false);
 	#$options/stat/ScrollContainer/VFlowContainer
 	var gameobjecttemplate = preload("res://Scenes/label.tscn")
+	print(gameobjecttemplate)
 	var gameobject1 = gameobjecttemplate.instantiate()
 	$"idle/lablel placeholder2".add_child(gameobject1)
 	#$"idle/lablel placeholder2"
