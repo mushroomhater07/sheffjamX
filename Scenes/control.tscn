@@ -186,14 +186,12 @@ offset_bottom = -60.0
 scale = Vector2(15, 7)
 texture = ExtResource("12_jfxv3")
 
-[node name="TextureRect2" type="TextureRect" parent="option"]
+[node name="VFlowContainer" type="VFlowContainer" parent="option/TextureRect"]
 layout_mode = 0
-offset_left = 331.0
-offset_top = -99.0
-offset_right = 376.0
-offset_bottom = -60.0
-scale = Vector2(15, 7)
-texture = ExtResource("12_jfxv3")
+offset_left = 1.0
+offset_top = 40.0
+offset_right = 47.0
+offset_bottom = 122.0
 
 [connection signal="button_up" from="VBoxContainer/TextureButton2" to="." method="_on_texture_button_2_button_up"]
 [connection signal="button_up" from="VBoxContainer/TextureButton" to="." method="_on_texture_button_button_up"]
