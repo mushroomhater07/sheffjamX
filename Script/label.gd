@@ -7,9 +7,8 @@ extends HBoxContainer
 func _ready():
 	
 	pass # Replace with function body.
-func setlabel1(text1):
-	#print("run")
-	label_1.text = "tr(text1)"
+func setlabel1():
+	label_1.text = "hi"
 #func setlabel2(text1 : String):
 	#label_2.text = text1
 # Called every frame. 'delta' is the elapsed time since the previous frame.

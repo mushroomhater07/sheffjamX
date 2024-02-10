@@ -17,7 +17,7 @@ func data_init():
 	for key in datafile.all_time_stat:
 		print(key)
 		var gameobject1 = gameobjecttemplate.instantiate()
-		gameobject1.setlabel1(key)
+		gameobject1.setlabel1()
 		#gameobject1.setlabel1(datafile.all_time_stat[key])
 		#$options/stat/ScrollContainer/VFlowContainer.add_child(gameobject1)
 
