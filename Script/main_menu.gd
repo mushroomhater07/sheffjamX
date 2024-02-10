@@ -5,6 +5,7 @@ var muted : bool;
 var datafile :Dictionary;
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	data_init()
 	$options.hide();$options/mute.hide();$options/stat.hide();$options/optionchoice.hide();
 
 func data_init():
