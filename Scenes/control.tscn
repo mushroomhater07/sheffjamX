@@ -1,0 +1,186 @@
+[gd_scene load_steps=13 format=3 uid="uid://cie3fggl5g14u"]
+
+[ext_resource type="Texture2D" uid="uid://bqjy6uy37xfvo" path="res://Assets/tile044.png" id="1_i1rhe"]
+[ext_resource type="Texture2D" uid="uid://bg6pwjnipmjun" path="res://Assets/tile042.png" id="2_r40go"]
+[ext_resource type="Texture2D" uid="uid://dmranw3x88i3c" path="res://Assets/tile048.png" id="3_2xymu"]
+[ext_resource type="Texture2D" uid="uid://cc8xg8krjjtpb" path="res://Assets/tile046.png" id="4_806ix"]
+[ext_resource type="Texture2D" uid="uid://dtdx7fci5ntla" path="res://Assets/tile045.png" id="5_7ojoi"]
+[ext_resource type="Texture2D" uid="uid://bio00qkduj3y" path="res://Assets/tile043.png" id="5_uud4l"]
+[ext_resource type="Texture2D" uid="uid://dpideyulcmg45" path="res://Assets/tile049.png" id="7_bxmda"]
+[ext_resource type="Texture2D" uid="uid://c5e73hrhlbopy" path="res://Assets/tile047.png" id="8_mheyw"]
+[ext_resource type="VideoStream" path="res://heist.ogv" id="9_1dvh2"]
+[ext_resource type="Texture2D" uid="uid://p8pb573cjnoo" path="res://New Piskel (2).png" id="10_3awx1"]
+[ext_resource type="Texture2D" uid="uid://c3qjv8u6x1j7j" path="res://New Piskel (1).png" id="11_nfp3l"]
+[ext_resource type="Texture2D" uid="uid://chows5gnk824w" path="res://stat.png" id="12_jfxv3"]
+
+[node name="idle" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+offset_right = 1393.0
+offset_bottom = 781.0
+stream = ExtResource("9_1dvh2")
+autoplay = true
+expand = true
+loop = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -349.0
+offset_top = -549.0
+offset_right = -301.0
+offset_bottom = -473.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(7, 7)
+alignment = 1
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+visible = false
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+icon = ExtResource("1_i1rhe")
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+visible = false
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+icon = ExtResource("2_r40go")
+
+[node name="Button4" type="Button" parent="VBoxContainer"]
+visible = false
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+icon = ExtResource("3_2xymu")
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+visible = false
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+icon = ExtResource("4_806ix")
+
+[node name="TextureButton2" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_i1rhe")
+texture_pressed = ExtResource("5_7ojoi")
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_r40go")
+texture_pressed = ExtResource("5_uud4l")
+
+[node name="TextureButton4" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_2xymu")
+texture_pressed = ExtResource("7_bxmda")
+
+[node name="TextureButton3" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_806ix")
+texture_pressed = ExtResource("8_mheyw")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -344.0
+offset_top = -742.0
+offset_right = -106.0
+offset_bottom = -600.0
+grow_horizontal = 0
+grow_vertical = 0
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Balance:"
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "0"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer2/HBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Balance:"
+
+[node name="Label2" type="Label" parent="VBoxContainer2/HBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "0"
+
+[node name="option" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 0
+offset_right = 1377.0
+offset_bottom = 767.0
+
+[node name="ColorRect" type="ColorRect" parent="option"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.270588)
+
+[node name="mute" type="TextureButton" parent="option"]
+visible = false
+layout_mode = 2
+offset_left = 460.0
+offset_top = 145.0
+offset_right = 492.0
+offset_bottom = 177.0
+scale = Vector2(15, 15)
+texture_normal = ExtResource("10_3awx1")
+texture_focused = ExtResource("11_nfp3l")
+
+[node name="TextureRect" type="TextureRect" parent="option"]
+layout_mode = 0
+offset_left = 331.0
+offset_top = -99.0
+offset_right = 376.0
+offset_bottom = -60.0
+scale = Vector2(15, 7)
+texture = ExtResource("12_jfxv3")
+
+[node name="TextureRect2" type="TextureRect" parent="option"]
+layout_mode = 0
+offset_left = 331.0
+offset_top = -99.0
+offset_right = 376.0
+offset_bottom = -60.0
+scale = Vector2(15, 7)
+texture = ExtResource("12_jfxv3")
