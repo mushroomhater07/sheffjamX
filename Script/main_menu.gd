@@ -73,4 +73,4 @@ func _on_button_button_up():
 
 
 func _on_stats_button_up():
-	pass # Replace with function body.
+	$options/stat.show();
