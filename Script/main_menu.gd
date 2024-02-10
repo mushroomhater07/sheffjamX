@@ -40,6 +40,8 @@ func mute():
 	if(muted):
 		muted = false
 		get_node("options/mute").set_normal_texture(preload("res://Assets/nmuted.png"))
+		datafile.setting.mute = false
 	else:
 		muted = true
 		get_node("options/mute").set_normal_texture(preload("res://Assets/muted.png"))
+		datafile.setting.mute = true
