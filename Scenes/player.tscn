@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ctta1v4gpeus2"]
+[gd_scene load_steps=12 format=3 uid="uid://ctta1v4gpeus2"]
 
 [ext_resource type="Texture2D" uid="uid://0fyega4djogo" path="res://Assets/tilemap.png" id="1_af7mq"]
 [ext_resource type="Script" path="res://Script/player.gd" id="1_iim0t"]
@@ -27,12 +27,34 @@ size = Vector2(12, 16)
 [sub_resource type="CircleShape2D" id="CircleShape2D_eefx7"]
 radius = 24.0208
 
+[sub_resource type="Animation" id="Animation_n30n4"]
+resource_name = "move"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerCharacter/PlayerSprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -15), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jt30p"]
+_data = {
+"move": SubResource("Animation_n30n4")
+}
+
 [node name="Player" type="Node2D"]
 
 [node name="PlayerCharacter" type="CharacterBody2D" parent="."]
 script = ExtResource("1_iim0t")
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="PlayerCharacter"]
+position = Vector2(0, -2.51786)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_8o440")
 
@@ -60,5 +82,8 @@ visible = false
 [node name="Wrench" parent="PlayerCharacter/ConsumableManager" instance=ExtResource("4_vb147")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_jt30p")
+}
 
 [connection signal="body_entered" from="PlayerCharacter/DetectionHitbox" to="PlayerCharacter" method="_on_detection_hitbox_body_entered"]

@@ -1,6 +1,7 @@
 extends CharacterBody2D
 class_name Player
 
+@onready var player_sprite = $PlayerSprite
 
 @export var max_speed:float = 300
 var current_speed:Vector2 = Vector2(0, 0)
@@ -27,9 +28,11 @@ func _physics_process(delta):
 		nothing_pressed = false
 	if Input.is_action_pressed("left"):
 		frame_speed_vector[0] = -1
+		player_sprite.scale.x = -2
 		nothing_pressed = false
 	if Input.is_action_pressed("right"):
 		frame_speed_vector[0] = 1
+		player_sprite.scale.x = 2
 		nothing_pressed = false
 	
 	frame_speed_vector = frame_speed_vector.normalized()
@@ -48,6 +51,9 @@ func _physics_process(delta):
 		current_speed /= max_scale
 	
 	velocity = current_speed
+	if (velocity != Vector2.ZERO):
+		$"../AnimationPlayer".play("move")
+	
 	move_and_slide()
 	
 func _on_detection_hitbox_body_entered(body):
