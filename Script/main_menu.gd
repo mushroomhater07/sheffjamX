@@ -7,7 +7,7 @@ func _ready():
 	datafile = JSON.parse_string(FileAccess.open("res://data/userdata.json",FileAccess.READ).get_as_text())
 	#var datafile = JSON.parse_string(FileAccess.get_file_as_string("res://data/userdata.json"))
 	muted = datafile.setting.mute
-	mute();
+	mute(false);
 	$options.hide();$options/mute.hide();
 
 #func _unhandled_input(event):
@@ -34,17 +34,23 @@ func _on_texture_button_3_button_up():
 
 
 func _on_mute_button_up():
-	#if()
+	mute(true);
 	pass
-func mute():
-	if(muted):
-		muted = false
-		get_node("options/mute").texture_normal = preload("res://Assets/nmuted.png")
-		datafile.setting.mute = false
-		FileAccess.open("res://data/userdata.json", FileAccess.WRITE).store_string ( JSON.stringify(datafile))
+func mute(change: bool):
+	if (change):
+		if(muted):
+			muted = false
+			get_node("options/mute").texture_normal = preload("res://Assets/nmuted.png")
+			datafile.setting.mute = false
+			FileAccess.open("res://data/userdata.json", FileAccess.WRITE).store_string ( JSON.stringify(datafile))
+		else:
+			muted = true
+			get_node("options/mute").texture_normal = preload("res://Assets/muted.png")
+			datafile.setting.mute = true
+			FileAccess.open("res://data/userdata.json", FileAccess.WRITE).store_string ( JSON.stringify(datafile))
 	else:
-		muted = true
-		get_node("options/mute").texture_normal = preload("res://Assets/muted.png")
-		datafile.setting.mute = true
-		FileAccess.open("res://data/userdata.json", FileAccess.WRITE).store_string ( JSON.stringify(datafile))
-		
+		if(muted):
+			get_node("options/mute").texture_normal = preload("res://Assets/muted.png")
+		else:
+			get_node("options/mute").texture_normal = preload("res://Assets/muted.png")
+	
