@@ -17,7 +17,7 @@ func _ready():
 	var error = http_request.request("")
 	if error != OK:
 		print("An error occurred in the HTTP request.")
-		get_child(0).set_texture("res://Assets/painting.png")
+		get_child(0).set_texture(load("res://Assets/painting.png"))
 
 ## Called when the HTTP request is completed.
 func _http_request_completed(result, response_code, headers, body):
