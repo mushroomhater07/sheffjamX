@@ -12,17 +12,27 @@ func data_init():
 	datafile = JSON.parse_string(FileAccess.open("res://data/userdata.json",FileAccess.READ).get_as_text())
 	#var datafile = JSON.parse_string(FileAccess.get_file_as_string("res://data/userdata.json"))
 	muted = datafile.setting.mute
-	mute(false);
+	
 	var gameobjecttemplate = preload("res://Scenes/label.tscn")
+	var gameobject2 = gameobjecttemplate.instantiate()
+	gameobject2.setlabel1("Balance")
+	gameobject2.setlabel2(datafile.current_stat["money"])
+	gameobject2.setblack()
+	print(get_node("idle/lablel placeholder2"))
+	$"idle/label placeholder".add_child(gameobject2)
+	gameobject2 = gameobjecttemplate.instantiate()
+	gameobject2.setlabel1("Mute")
+	gameobject2.setlabel2(muted)
+	gameobject2.setblack()
+	$"idle/label placeholder2".add_child(gameobject2)
+
+	mute(false);
 	for key in datafile.all_time_stat:
 		var gameobject1 = gameobjecttemplate.instantiate()
 		gameobject1.setlabel1(key)
 		gameobject1.setlabel2(datafile.all_time_stat[key])
 		reparent($options/stat/ScrollContainer/VFlowContainer)
 		$options/stat/ScrollContainer/VFlowContainer.add_child(gameobject1)
-
-	#$"idle/lablel placeholder2".add_child(gameobject1)
-	#$"idle/lablel placeholder2"
 #func _unhandled_input(event):
 	#if event.is_action_pressed("ui_accept"):
 		
@@ -77,7 +87,9 @@ func mute(change: bool):
 		if(muted):
 			get_node("options/mute").texture_normal = preload("res://Assets/muted.png")
 		else:
-			get_node("options/mute").texture_normal = preload("res://Assets/muted.png")
+			get_node("options/mute").texture_normal = preload("res://Assets/nmuted.png")
+			
+	$"idle/label placeholder2".get_child(0).setlabel2(muted)
 	
 
 
