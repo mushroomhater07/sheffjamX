@@ -31,7 +31,10 @@ func _physics_process(delta):
 				velocity = Vector2.ZERO
 		State.CHASE:
 			pass
-	
+	if direction.x > 0:
+		$Sprite2D.scale.x = 6
+	else:
+		$Sprite2D.scale.x = -6
 	move_and_slide()
 
 func reset_pos():

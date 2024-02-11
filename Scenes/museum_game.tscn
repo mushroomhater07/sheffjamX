@@ -18,6 +18,9 @@ position = Vector2(189, 196)
 [node name="BottomRight" parent="Player/PlayerCharacter/PlayerCamera/Limits" index="1"]
 position = Vector2(3488, 1984)
 
+[node name="Painting25" parent="Player" instance=ExtResource("5_36cay")]
+position = Vector2(1048, 1670)
+
 [node name="Guard" parent="." instance=ExtResource("3_efud8")]
 position = Vector2(534, 268)
 
@@ -133,9 +136,6 @@ position = Vector2(133, 1557)
 
 [node name="Painting24" parent="Paintings" instance=ExtResource("5_36cay")]
 position = Vector2(164, 1875)
-
-[node name="Painting25" parent="Paintings" instance=ExtResource("5_36cay")]
-position = Vector2(1237, 1866)
 
 [node name="Exit" parent="." instance=ExtResource("6_ovkeg")]
 position = Vector2(3458, 896)
