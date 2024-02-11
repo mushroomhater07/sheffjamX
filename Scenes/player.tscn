@@ -73,7 +73,6 @@ collision_mask = 6
 
 [node name="Sprite2D" type="Sprite2D" parent="PlayerCharacter/PlayerSprite/bag"]
 texture = ExtResource("11_82mw7")
-flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCharacter/PlayerSprite/bag"]
 position = Vector2(-0.5, 1.5)
