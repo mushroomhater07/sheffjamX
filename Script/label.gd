@@ -1,5 +1,5 @@
 extends HBoxContainer
-@onready var control = $Control
+#@onready var control = $Control
 var label_1 : Label 
 var label_2 : Label
 
