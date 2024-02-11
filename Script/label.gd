@@ -7,7 +7,7 @@ extends HBoxContainer
 func _ready():
 	
 	pass # Replace with function body.
-func setlabel1(text1):
+func setlabel1(text1 : String = ""):
 	label_1.set_text(text1)
 #func setlabel2(text1 : String):
 	#label_2.text = text1
