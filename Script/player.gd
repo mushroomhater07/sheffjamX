@@ -61,6 +61,7 @@ func _physics_process(delta):
 	if (velocity != Vector2.ZERO):
 		$"../AnimationPlayer".play("move")
 	
+	$bag.set_scale(Vector2(bag_size,bag_size))
 	move_and_slide()
 	
 func _on_detection_hitbox_body_entered(_body):
