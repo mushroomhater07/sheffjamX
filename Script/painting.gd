@@ -27,7 +27,6 @@ func _http_request_completed(result, response_code, headers, body):
 	var error = image.load_png_from_buffer(body)
 	if error != OK:
 		push_error("Couldn't load the image.")
-		get_child(0).set_texture("res://Assets/painting.png")
 		get_child(0).set_texture(load("res://Assets/painting.png"))
 	get_child(0).set_texture(ImageTexture.create_from_image(image))
 	get_child(0).set_scale(Vector2(0.0533333,0.0533333))
