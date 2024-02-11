@@ -87,6 +87,8 @@ func mute(change: bool):
 			get_node("options/mute").texture_normal = preload("res://Assets/muted.png")
 		else:
 			get_node("options/mute").texture_normal = preload("res://Assets/muted.png")
+			
+	$"idle/label placeholder2".get_child(0).setlabel2(muted)
 	
 
 
