@@ -73,3 +73,7 @@ func _on_ghost_timer_timeout():
 	
 func _on_area_2d_body_entered(body):
 	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
+
+
+func _on_bag_body_entered(body):
+	pass # Replace with function body.
