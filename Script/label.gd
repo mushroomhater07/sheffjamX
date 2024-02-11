@@ -13,4 +13,4 @@ func setlabel1(text1):
 func setlabel2(text1):
 	get_child(1).set_text(str(text1))
 func setblack():
-	get_child(0).font_color = Color(0, 0, 0, 1)
+	get_child(0).set("theme_override_colors/font_color",Color(0, 0, 0, 1))
