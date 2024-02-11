@@ -10,13 +10,13 @@
 [ext_resource type="Texture2D" uid="uid://dpideyulcmg45" path="res://Assets/UI/poptions.png" id="7_bxmda"]
 [ext_resource type="Texture2D" uid="uid://c5e73hrhlbopy" path="res://Assets/UI/tile047.png" id="8_mheyw"]
 [ext_resource type="VideoStream" path="res://Assets/heist.ogv" id="9_1dvh2"]
-[ext_resource type="Texture2D" uid="uid://p8pb573cjnoo" path="res://Assets/nmuted.png" id="10_3awx1"]
+[ext_resource type="Texture2D" path="res://Assets/nmuted.png" id="10_3awx1"]
 [ext_resource type="Texture2D" uid="uid://chows5gnk824w" path="res://Assets/UI/stat.png" id="12_jfxv3"]
 [ext_resource type="Texture2D" uid="uid://dinfy3yv2shvu" path="res://Assets/UI/ezgif-7-0fe6a2cf0d-png-32x32-sprite-png/tile001.png" id="13_46i3i"]
 [ext_resource type="Texture2D" uid="uid://dvugk6ik65dc8" path="res://Assets/UI/ezgif-7-0fe6a2cf0d-png-32x32-sprite-png/tile000.png" id="14_37y0o"]
 [ext_resource type="Texture2D" uid="uid://f8s3dvjvdhkp" path="res://Assets/UI/stat (2).png" id="15_8kas2"]
 [ext_resource type="Texture2D" uid="uid://c1ny5pg4h5b13" path="res://Assets/UI/sound.png" id="16_d3773"]
-[ext_resource type="PackedScene" uid="uid://cjj3mn2q8biqn" path="res://Scenes/label.tscn" id="17_kbv0q"]
+[ext_resource type="PackedScene" path="res://Scenes/label.tscn" id="17_kbv0q"]
 
 [node name="main_control" type="Node"]
 script = ExtResource("1_8y7km")
