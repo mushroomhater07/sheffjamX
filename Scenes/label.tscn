@@ -10,20 +10,18 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 2
-offset_left = -122.0
-offset_top = -34.0
-offset_right = 83.0
-offset_bottom = 35.0
+offset_left = 1.0
+offset_right = 206.0
+offset_bottom = 69.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
 text = "Balance:"
 
 [node name="Label2" type="Label" parent="Control"]
 layout_mode = 2
-offset_left = 87.0
-offset_top = -34.0
-offset_right = 116.0
-offset_bottom = 35.0
+offset_left = 210.0
+offset_right = 239.0
+offset_bottom = 69.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
 text = "0"
