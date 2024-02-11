@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://0dgxwigo0len"]
+
+[ext_resource type="Script" path="res://Scenes/ShopGUI/shop_player_inventory.gd" id="1_8uk16"]
+[ext_resource type="PackedScene" uid="uid://8vhagqqfa0ib" path="res://Scenes/ShopGUI/shop_inventory_consumables.tscn" id="2_1upbg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_f3enq"]
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2we0v"]
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[node name="ShopPlayerInventory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8uk16")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 688.0
+offset_right = 1376.0
+offset_bottom = 768.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 725.0
+offset_top = 34.0
+offset_right = 765.0
+offset_bottom = 57.0
+text = "You Currently Have:"
+label_settings = SubResource("LabelSettings_f3enq")
+
+[node name="ShopInventoryConsumables" parent="." instance=ExtResource("2_1upbg")]
+layout_mode = 1
+offset_left = 709.0
+offset_top = 100.0
+offset_right = 709.0
+offset_bottom = 100.0
+
+[node name="Money" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1142.0
+offset_top = 35.0
+offset_right = 1348.0
+offset_bottom = 77.0
+text = "<Money here>"
+label_settings = SubResource("LabelSettings_2we0v")

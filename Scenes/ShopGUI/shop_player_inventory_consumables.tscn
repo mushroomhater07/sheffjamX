@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://d35rst4u3opdy"]
+
+[ext_resource type="PackedScene" uid="uid://df48xh40slj61" path="res://Scenes/ShopGUI/consumable_count_row.tscn" id="1_43j4e"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_itsrk"]
+font_size = 40
+font_color = Color(0, 0, 0, 1)
+
+[node name="ShopPlayerInventoryConsumables" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 647.0
+offset_bottom = 224.0
+color = Color(0.709804, 0.709804, 0.709804, 1)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 273.0
+offset_bottom = 55.0
+text = "Consumables:"
+label_settings = SubResource("LabelSettings_itsrk")
+
+[node name="ConsumableCountRow" parent="." instance=ExtResource("1_43j4e")]
+layout_mode = 1
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 5.0
+offset_bottom = 5.0
+
+[node name="ConsumableCountRow2" parent="." instance=ExtResource("1_43j4e")]
+layout_mode = 1
+offset_left = 5.0
+offset_top = 50.0
+offset_right = 5.0
+offset_bottom = 50.0
+
+[node name="ConsumableCountRow3" parent="." instance=ExtResource("1_43j4e")]
+layout_mode = 1
+offset_left = 5.0
+offset_top = 95.0
+offset_right = 5.0
+offset_bottom = 95.0

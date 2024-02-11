@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b32pr8j3kijqr"]
+
+[ext_resource type="Script" path="res://Scenes/ShopGUI/shop.gd" id="1_cd0b3"]
+[ext_resource type="PackedScene" uid="uid://dw8vwdrp7eneo" path="res://Scenes/ShopGUI/shop_inventory.tscn" id="1_lv8s1"]
+[ext_resource type="PackedScene" uid="uid://0dgxwigo0len" path="res://Scenes/ShopGUI/shop_player_inventory.tscn" id="2_mgcnp"]
+
+[node name="Shop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cd0b3")
+
+[node name="ShopInventory" parent="." instance=ExtResource("1_lv8s1")]
+layout_mode = 1
+
+[node name="ShopPlayerInventory" parent="." instance=ExtResource("2_mgcnp")]
+layout_mode = 1
