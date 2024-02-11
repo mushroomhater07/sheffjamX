@@ -15,7 +15,6 @@ func data_init():
 	mute(false);
 	var gameobjecttemplate = preload("res://Scenes/label.tscn")
 	for key in datafile.all_time_stat:
-		print(key)
 		var gameobject1 = gameobjecttemplate.instantiate()
 		gameobject1.setlabel1(key)
 		gameobject1.setlabel2(datafile.all_time_stat[key])
