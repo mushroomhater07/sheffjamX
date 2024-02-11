@@ -64,7 +64,6 @@ func _physics_process(delta):
 func _on_detection_hitbox_body_entered(_body):
 	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
 
-
 func _on_ghost_timer_timeout():
 	var afterimage = preload("res://Scenes/after_image.tscn").instantiate()
 	afterimage.texture = player_sprite.sprite_frames.get_frame_texture("default", 0)
