@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://wt68373fb0o2"]
+
+[ext_resource type="Script" path="res://Script/painting.gd" id="1_6r8r0"]
+[ext_resource type="Texture2D" uid="uid://do7yfclo8u5xo" path="res://Assets/painting.png" id="1_ciftk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7pco0"]
+size = Vector2(32, 32)
+
+[node name="Painting" type="Node2D"]
+script = ExtResource("1_6r8r0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("1_ciftk")
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(2, 2)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_7pco0")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
