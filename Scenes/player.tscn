@@ -65,6 +65,7 @@ script = ExtResource("1_iim0t")
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="PlayerCharacter"]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_8o440")
+flip_h = true
 
 [node name="PlayerCamera" parent="PlayerCharacter" instance=ExtResource("3_6tm0j")]
 
