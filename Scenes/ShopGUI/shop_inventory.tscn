@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://pww8v6a4n7a4"]
+[gd_scene load_steps=4 format=3 uid="uid://dw8vwdrp7eneo"]
 
 [ext_resource type="Script" path="res://Scenes/ShopGUI/shop_inventory.gd" id="1_ibamx"]
-[ext_resource type="PackedScene" uid="uid://dhrx7t4ux7a2g" path="res://Scenes/ShopGUI/shop_inventory_consumables.tscn" id="1_jg46d"]
+[ext_resource type="PackedScene" uid="uid://8vhagqqfa0ib" path="res://Scenes/ShopGUI/shop_inventory_consumables.tscn" id="1_jg46d"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_h1t0o"]
 font_size = 40

@@ -1,3 +1,4 @@
+
 [gd_scene load_steps=16 format=3 uid="uid://hi5o6klk4wsb"]
 
 [ext_resource type="Script" path="res://Scenes/ShopGUI/consumable_icon.gd" id="1_2rmtq"]

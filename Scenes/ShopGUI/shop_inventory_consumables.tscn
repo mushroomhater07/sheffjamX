@@ -1,7 +1,9 @@
+
 [gd_scene load_steps=3 format=3 uid="uid://dhrx7t4ux7a2g"]
 
+
 [ext_resource type="Script" path="res://Scenes/ShopGUI/shop_inventory_consumables.gd" id="1_tu1iv"]
-[ext_resource type="PackedScene" uid="uid://hi5o6klk4wsb" path="res://Scenes/ShopGUI/consumable_icon.tscn" id="2_hmgcs"]
+[ext_resource type="PackedScene" uid="uid://chntlscrt8jic" path="res://Scenes/ShopGUI/consumable_icon.tscn" id="2_hmgcs"]
 
 [node name="ShopInventoryConsumables" type="Control"]
 layout_mode = 3

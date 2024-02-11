@@ -7,6 +7,8 @@ class_name Player
 @export var max_speed:float = 300
 var current_speed:Vector2 = Vector2(0, 0)
 
+@export var bag_size:float = 1;
+
 ##### speed increase/decrease per sec
 @export var acceleration:float = 10000
 @export var deceleration:float = 10000
@@ -35,10 +37,14 @@ func _physics_process(delta):
 		frame_speed_vector[0] = -1
 		player_sprite.scale.x = -2
 		nothing_pressed = false
+		$PlayerSprite/bag/Sprite2D.set_flip_h(false)
+		$PlayerSprite/bag.set_scale(Vector2(bag_size/2,bag_size/2))
 	if Input.is_action_pressed("right"):
 		frame_speed_vector[0] = 1
 		player_sprite.scale.x = 2
 		nothing_pressed = false
+		$PlayerSprite/bag/Sprite2D.set_flip_h(true)
+		$PlayerSprite/bag.set_scale(Vector2(-bag_size/2,bag_size/2))
 	
 	frame_speed_vector = frame_speed_vector.normalized()
 	if nothing_pressed:
@@ -58,12 +64,11 @@ func _physics_process(delta):
 	velocity = current_speed
 	if (velocity != Vector2.ZERO):
 		$"../AnimationPlayer".play("move")
-	
+
 	move_and_slide()
 	
 func _on_detection_hitbox_body_entered(_body):
 	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
-
 
 func _on_ghost_timer_timeout():
 	var afterimage = preload("res://Scenes/after_image.tscn").instantiate()
@@ -72,3 +77,6 @@ func _on_ghost_timer_timeout():
 	get_parent().add_child(afterimage)
 	afterimage.global_position = global_position
 	
+
+func _on_bag_body_entered(body):
+	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
