@@ -14,7 +14,7 @@ func _ready():
 	var http_request = HTTPRequest.new()
 	add_child(http_request)
 	http_request.request_completed.connect(self._http_request_completed)
-	var error = http_request.request(datafile.painting[randi() % datafile.painting.length()])
+	var error = http_request.request(datafile.painting[randi() % len(datafile.painting)])
 	if error != OK:
 		print("An error occurred in the HTTP request.")
 		get_child(0).set_texture("res://Assets/painting.png")
