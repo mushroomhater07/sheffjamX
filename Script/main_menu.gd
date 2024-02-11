@@ -20,9 +20,6 @@ func data_init():
 		gameobject1.setlabel2(datafile.all_time_stat[key])
 		reparent($options/stat/ScrollContainer/VFlowContainer)
 		$options/stat/ScrollContainer/VFlowContainer.add_child(gameobject1)
-
-	#$"idle/lablel placeholder2".add_child(gameobject1)
-	#$"idle/lablel placeholder2"
 #func _unhandled_input(event):
 	#if event.is_action_pressed("ui_accept"):
 		
