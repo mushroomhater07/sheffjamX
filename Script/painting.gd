@@ -17,7 +17,7 @@ func _ready():
 	var error = http_request.request(datafile.painting[randi() % datafile.painting.length()])
 	if error != OK:
 		print("An error occurred in the HTTP request.")
-		set_texture("res://Assets/painting.png")
+		get_child(0).set_texture("res://Assets/painting.png")
 
 ## Called when the HTTP request is completed.
 #func _http_request_completed(result, response_code, headers, body):
