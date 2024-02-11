@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://ctta1v4gpeus2"]
+[gd_scene load_steps=19 format=3 uid="uid://ctta1v4gpeus2"]
 
 [ext_resource type="Texture2D" uid="uid://0fyega4djogo" path="res://Assets/tilemap.png" id="1_af7mq"]
 [ext_resource type="Script" path="res://Script/player.gd" id="1_iim0t"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/Consumables/lights_out.tscn" id="6_gsjt7"]
 [ext_resource type="PackedScene" path="res://Scenes/Consumables/speed_boost.tscn" id="6_ibht0"]
 [ext_resource type="PackedScene" path="res://Scenes/Consumables/silent_shoes.tscn" id="6_xcoft"]
+[ext_resource type="Texture2D" uid="uid://bl4sohmixxewi" path="res://Assets/tile198.png" id="11_82mw7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7rw21"]
 atlas = ExtResource("1_af7mq")
@@ -31,6 +32,9 @@ size = Vector2(12, 16)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_eefx7"]
 radius = 24.0208
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xh50"]
+size = Vector2(13, 17)
 
 [sub_resource type="Animation" id="Animation_n30n4"]
 resource_name = "move"
@@ -97,6 +101,17 @@ script = ExtResource("5_u1787")
 [node name="GhostTimer" type="Timer" parent="PlayerCharacter"]
 wait_time = 0.1
 
+[node name="Area2D" type="Area2D" parent="PlayerCharacter"]
+position = Vector2(17, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerCharacter/Area2D"]
+texture = ExtResource("11_82mw7")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCharacter/Area2D"]
+position = Vector2(-0.5, 1.5)
+shape = SubResource("RectangleShape2D_0xh50")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_jt30p")
@@ -104,3 +119,4 @@ libraries = {
 
 [connection signal="body_entered" from="PlayerCharacter/DetectionHitbox" to="PlayerCharacter" method="_on_detection_hitbox_body_entered"]
 [connection signal="timeout" from="PlayerCharacter/GhostTimer" to="PlayerCharacter" method="_on_ghost_timer_timeout"]
+[connection signal="body_entered" from="PlayerCharacter/Area2D" to="PlayerCharacter" method="_on_area_2d_body_entered"]
