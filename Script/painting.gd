@@ -9,7 +9,7 @@ func _physics_process(delta):
 
 func _ready():
 	var datafile :Dictionary = JSON.parse_string(FileAccess.open("res://data/gamedata.json",FileAccess.READ).get_as_text())
-	print(randi() % datafile.painting.length())
+	print(randi() % len(datafile.painting))
 	print(datafile.painting[randi() % datafile.painting.length()])
 	var http_request = HTTPRequest.new()
 	add_child(http_request)
