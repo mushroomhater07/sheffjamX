@@ -19,7 +19,6 @@ func _ready():
 		print("An error occurred in the HTTP request.")
 		get_child(0).set_texture(load("res://Assets/painting.png"))
 
-## Called when the HTTP request is completed.
 func _http_request_completed(result, response_code, headers, body):
 	if result != HTTPRequest.RESULT_SUCCESS:
 		print("Image couldn't be downloaded. Try a different image.")
@@ -31,6 +30,7 @@ func _http_request_completed(result, response_code, headers, body):
 		get_child(0).set_texture("res://Assets/painting.png")
 		get_child(0).set_texture(load("res://Assets/painting.png"))
 	get_child(0).set_texture(ImageTexture.create_from_image(image))
+	get_child(0).set_scale(0.0266666)
 	
 func _on_area_2d_area_entered(area):
 
