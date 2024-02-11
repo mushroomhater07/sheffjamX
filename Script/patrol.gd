@@ -9,6 +9,10 @@ var state : State
 
 @onready var navigation_agent: NavigationAgent2D = $Navigation2D/NavigationAgent2D
 @onready var detectionArea : Area2D = $DetectionArea
+@onready var patrol_timer = $PatrolTimer
+@onready var timer = $Navigation2D/Timer
+
+@onready var stunned_mark_scene : PackedScene = preload("res://Scenes/stunned_mark.tscn")
 
 var patrol_position : Vector2
 
@@ -30,6 +34,8 @@ func _physics_process(delta):
 	
 	move_and_slide()
 
+func reset_pos():
+	navigation_agent.target_position = patrol_position
 	
 func init(new_target):
 	print(new_target)
@@ -40,19 +46,33 @@ func _on_timer_timeout():
 
 
 func _on_detection_area_area_entered(area):
-	print("Player detected")
-	target = area.get_parent()
-	$Navigation2D/Timer.start()
+	if(area.get_parent() is Player):
+		var player : Player = area.get_parent()
+		player.stopped_sneaking.connect(_on_detection_area_area_entered.bind(area))
+		if player.sneaking:
+			return
+		target = area.get_parent()
+		$Navigation2D/Timer.start()
+	detectionArea.get_overlapping_areas()
 
+func stun():
+	speed = 0
+	$Stun.start()
+	var stunned_mark = stunned_mark_scene.instantiate()
+	stunned_mark.global_position.y -= 100
+	add_child(stunned_mark)
 
-func _on_detection_area_area_exited(area):
+func _on_detection_area_area_exited(_area):
 	target = null
 	$Navigation2D/Timer.stop()
-	navigation_agent.target_position
-	navigation_agent.target_position = patrol_position
+	reset_pos()
 
 
 func _on_patrol_timer_timeout():
 	var direction = randi_range(-1, 1)
-	
 	navigation_agent.target_position = global_position + Vector2(50 * direction, 0)
+
+
+func _on_stun_timeout():
+	speed = 150
+	reset_pos()

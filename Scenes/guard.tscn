@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bewl7m2ieg40r"]
+[gd_scene load_steps=6 format=3 uid="uid://bewl7m2ieg40r"]
 
 [ext_resource type="Script" path="res://Script/patrol.gd" id="1_y750v"]
 [ext_resource type="Texture2D" uid="uid://byykiywypqnx6" path="res://Assets/icon.svg" id="2_6sd0l"]
+[ext_resource type="Texture2D" uid="uid://d4je58vlt02cy" path="res://Assets/light.png" id="3_figtd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8wyd5"]
 radius = 46.697
@@ -11,9 +12,9 @@ radius = 540.7
 
 [node name="Guard" type="Node2D"]
 
-[node name="patrol" type="CharacterBody2D" parent="."]
+[node name="patrol" type="CharacterBody2D" parent="." groups=["guard"]]
 scale = Vector2(0.4, 0.4)
-collision_layer = 2
+collision_layer = 3
 script = ExtResource("1_y750v")
 
 [node name="Sprite2D" type="Sprite2D" parent="patrol"]
@@ -43,7 +44,18 @@ shape = SubResource("CircleShape2D_5ltv6")
 wait_time = 5.0
 autostart = true
 
+[node name="Stun" type="Timer" parent="patrol"]
+wait_time = 5.0
+one_shot = true
+
+[node name="PointLight2D" type="PointLight2D" parent="patrol" groups=["has_light"]]
+energy = 0.2
+shadow_enabled = true
+texture = ExtResource("3_figtd")
+texture_scale = 2.5
+
 [connection signal="timeout" from="patrol/Navigation2D/Timer" to="patrol" method="_on_timer_timeout"]
 [connection signal="area_entered" from="patrol/DetectionArea" to="patrol" method="_on_detection_area_area_entered"]
 [connection signal="area_exited" from="patrol/DetectionArea" to="patrol" method="_on_detection_area_area_exited"]
 [connection signal="timeout" from="patrol/PatrolTimer" to="patrol" method="_on_patrol_timer_timeout"]
+[connection signal="timeout" from="patrol/Stun" to="patrol" method="_on_stun_timeout"]

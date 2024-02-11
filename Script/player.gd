@@ -2,6 +2,7 @@ extends CharacterBody2D
 class_name Player
 
 @onready var player_sprite = $PlayerSprite
+@onready var ghost_timer = $GhostTimer
 
 @export var max_speed:float = 300
 var current_speed:Vector2 = Vector2(0, 0)
@@ -9,6 +10,10 @@ var current_speed:Vector2 = Vector2(0, 0)
 ##### speed increase/decrease per sec
 @export var acceleration:float = 10000
 @export var deceleration:float = 10000
+
+# Consumable related variables
+var sneaking : bool
+signal stopped_sneaking
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -56,6 +61,14 @@ func _physics_process(delta):
 	
 	move_and_slide()
 	
-func _on_detection_hitbox_body_entered(body):
+func _on_detection_hitbox_body_entered(_body):
 	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
 
+
+func _on_ghost_timer_timeout():
+	var afterimage = preload("res://Scenes/after_image.tscn").instantiate()
+	afterimage.texture = player_sprite.sprite_frames.get_frame_texture("default", 0)
+	afterimage.scale = Vector2(2,2)
+	get_parent().add_child(afterimage)
+	afterimage.global_position = global_position
+	

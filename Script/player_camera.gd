@@ -12,6 +12,4 @@ func _ready():
 	limit_right = bottom_right.position.x
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+
