@@ -19,7 +19,7 @@ func data_init():
 		var gameobject1 = gameobjecttemplate.instantiate()
 		gameobject1.setlabel1(key)
 		gameobject1.setlabel2(datafile.all_time_stat[key])
-		reparent($options/stat/ScrollContainer/VFlowContainer.add_child(gameobject1))
+		$options/stat/ScrollContainer/VFlowContainer.add_child(reparent(gameobject1))
 
 	#$"idle/lablel placeholder2".add_child(gameobject1)
 	#$"idle/lablel placeholder2"
