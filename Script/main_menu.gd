@@ -18,12 +18,10 @@ func data_init():
 	gameobject2.setlabel1("Balance: ")
 	gameobject2.setlabel2(datafile.current_stat["money"])
 	print(get_node("idle/label placeholder"))
-	reparent($"idle/label placeholder")
 	$"idle/label placeholder".add_child(gameobject2)
 	gameobject2 = gameobjecttemplate.instantiate()
 	gameobject2.setlabel1("Mute: ")
 	gameobject2.setlabel2(muted)
-	reparent($"idle/label placeholder2")
 	$"idle/label placeholder2".add_child(gameobject2)
 
 	for key in datafile.all_time_stat:
