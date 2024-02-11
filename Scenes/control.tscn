@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cie3fggl5g14u"]
+[gd_scene load_steps=20 format=3 uid="uid://cie3fggl5g14u"]
 
 [ext_resource type="Script" path="res://Script/main_menu.gd" id="1_8y7km"]
 [ext_resource type="Texture2D" uid="uid://bqjy6uy37xfvo" path="res://Assets/UI/continue.png" id="1_i1rhe"]
@@ -12,11 +12,16 @@
 [ext_resource type="VideoStream" path="res://Assets/heist.ogv" id="9_1dvh2"]
 [ext_resource type="Texture2D" uid="uid://p8pb573cjnoo" path="res://Assets/nmuted.png" id="10_3awx1"]
 [ext_resource type="Texture2D" uid="uid://bcuoi2ndpt0mx" path="res://Assets/New Piskel (3).png" id="11_uj1wp"]
+[ext_resource type="FontFile" uid="uid://bcjkq7556x8yo" path="res://Assets/ARCADECLASSIC.TTF" id="12_e4amt"]
 [ext_resource type="Texture2D" uid="uid://chows5gnk824w" path="res://Assets/UI/stat.png" id="12_jfxv3"]
 [ext_resource type="Texture2D" uid="uid://dinfy3yv2shvu" path="res://Assets/UI/ezgif-7-0fe6a2cf0d-png-32x32-sprite-png/tile001.png" id="13_46i3i"]
 [ext_resource type="Texture2D" uid="uid://dvugk6ik65dc8" path="res://Assets/UI/ezgif-7-0fe6a2cf0d-png-32x32-sprite-png/tile000.png" id="14_37y0o"]
 [ext_resource type="Texture2D" uid="uid://f8s3dvjvdhkp" path="res://Assets/UI/stat (2).png" id="15_8kas2"]
 [ext_resource type="Texture2D" uid="uid://c1ny5pg4h5b13" path="res://Assets/UI/sound.png" id="16_d3773"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ypv48"]
+font = ExtResource("12_e4amt")
+font_size = 60
 
 [node name="main_control" type="Node"]
 script = ExtResource("1_8y7km")
@@ -125,6 +130,7 @@ texture_normal = ExtResource("4_806ix")
 texture_pressed = ExtResource("8_mheyw")
 
 [node name="label placeholder" type="Control" parent="idle"]
+visible = false
 anchors_preset = 0
 offset_left = 47.0
 offset_top = 41.0
@@ -132,6 +138,7 @@ offset_right = 47.0
 offset_bottom = 41.0
 
 [node name="label placeholder2" type="Control" parent="idle"]
+visible = false
 anchors_preset = 0
 offset_left = 1020.0
 offset_top = 37.0
@@ -139,12 +146,23 @@ offset_right = 1020.0
 offset_bottom = 37.0
 
 [node name="Label" type="TextureRect" parent="idle"]
+visible = false
 layout_mode = 2
 offset_left = 287.0
 offset_top = 214.0
 offset_right = 1251.0
 offset_bottom = 468.0
 texture = ExtResource("11_uj1wp")
+
+[node name="Label2" type="Label" parent="idle"]
+layout_mode = 0
+offset_left = 367.0
+offset_top = 358.0
+offset_right = 1030.0
+offset_bottom = 441.0
+text = "Knight at the museum!
+"
+label_settings = SubResource("LabelSettings_ypv48")
 
 [node name="options" type="Control" parent="."]
 layout_mode = 3

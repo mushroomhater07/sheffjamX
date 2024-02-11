@@ -41,7 +41,7 @@ func _process(delta):
 
 func read_gamedata():
 	var datafile = JSON.parse_string(FileAccess.open("res://data/gamedata.json",FileAccess.READ).get_as_text())
-	
+	print(datafile)
 	var consumables = datafile["consumable"]
 	for i in range(len(consumables)):
 		var item_dict:Dictionary = consumables[i]
