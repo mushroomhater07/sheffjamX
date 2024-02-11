@@ -17,7 +17,8 @@ func data_init():
 	
 	for key in datafile.all_time_stat:
 		var gameobject1 = gameobjecttemplate.instantiate()
-		gameobject1.setlabel1(key).setlabel2(datafile.all_time_stat[key])
+		gameobject1.setlabel1(key)
+		gameobject1.setlabel2(datafile.all_time_stat[key])
 		reparent($options/stat/ScrollContainer/VFlowContainer)
 		$options/stat/ScrollContainer/VFlowContainer.add_child(gameobject1)
 #func _unhandled_input(event):
