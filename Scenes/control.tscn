@@ -233,8 +233,6 @@ scale = Vector2(0.06, 0.06)
 
 [node name="VFlowContainer" type="HFlowContainer" parent="options/stat/ScrollContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 2
 
 [node name="HBoxContainer2" parent="options/stat/ScrollContainer/VFlowContainer" instance=ExtResource("17_kbv0q")]
 layout_mode = 2
