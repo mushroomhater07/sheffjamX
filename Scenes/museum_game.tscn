@@ -3,9 +3,9 @@
 [ext_resource type="Script" path="res://Script/museum_game.gd" id="1_g5jon"]
 [ext_resource type="PackedScene" uid="uid://ctta1v4gpeus2" path="res://Scenes/player.tscn" id="2_76qo7"]
 [ext_resource type="PackedScene" uid="uid://bewl7m2ieg40r" path="res://Scenes/guard.tscn" id="3_efud8"]
-[ext_resource type="PackedScene" uid="uid://dt2emwiooogb8" path="res://Scenes/museum.tscn" id="5_4a8nu"]
+[ext_resource type="PackedScene" uid="uid://co5n4rvnfwrl3" path="res://Scenes/museum.tscn" id="5_4a8nu"]
 [ext_resource type="PackedScene" uid="uid://wt68373fb0o2" path="res://Scenes/painting.tscn" id="5_36cay"]
-[ext_resource type="PackedScene" uid="uid://bec86gd75or6p" path="res://Scenes/exit.tscn" id="6_ovkeg"]
+[ext_resource type="PackedScene" path="res://Scenes/exit.tscn" id="6_ovkeg"]
 
 [node name="MuseumGame" type="Node2D"]
 script = ExtResource("1_g5jon")
@@ -23,6 +23,42 @@ position = Vector2(534, 268)
 
 [node name="Guard2" parent="." instance=ExtResource("3_efud8")]
 position = Vector2(1220, 136)
+
+[node name="Guard3" parent="." instance=ExtResource("3_efud8")]
+position = Vector2(1860, 588)
+
+[node name="Guard4" parent="." instance=ExtResource("3_efud8")]
+position = Vector2(2293, 165)
+
+[node name="Guard5" parent="." instance=ExtResource("3_efud8")]
+position = Vector2(2887, 262)
+
+[node name="Guard6" parent="." instance=ExtResource("3_efud8")]
+position = Vector2(3158, 778)
+
+[node name="Guard7" parent="." instance=ExtResource("3_efud8")]
+position = Vector2(2264, 980)
+
+[node name="Guard8" parent="." instance=ExtResource("3_efud8")]
+position = Vector2(924, 1037)
+
+[node name="Guard9" parent="." instance=ExtResource("3_efud8")]
+position = Vector2(297, 959)
+
+[node name="Guard10" parent="." instance=ExtResource("3_efud8")]
+position = Vector2(248, 1670)
+
+[node name="Guard11" parent="." instance=ExtResource("3_efud8")]
+position = Vector2(694, 1774)
+
+[node name="Guard12" parent="." instance=ExtResource("3_efud8")]
+position = Vector2(2289, 1508)
+
+[node name="Guard13" parent="." instance=ExtResource("3_efud8")]
+position = Vector2(1813, 1819)
+
+[node name="Guard14" parent="." instance=ExtResource("3_efud8")]
+position = Vector2(2928, 1829)
 
 [node name="Paintings" type="Node" parent="."]
 
@@ -47,8 +83,63 @@ position = Vector2(959, 160)
 [node name="Painting7" parent="Paintings" instance=ExtResource("5_36cay")]
 position = Vector2(693, 107)
 
+[node name="Painting8" parent="Paintings" instance=ExtResource("5_36cay")]
+position = Vector2(1505, 987)
+
+[node name="Painting9" parent="Paintings" instance=ExtResource("5_36cay")]
+position = Vector2(1745, 1191)
+
+[node name="Painting10" parent="Paintings" instance=ExtResource("5_36cay")]
+position = Vector2(2001, 979)
+
+[node name="Painting11" parent="Paintings" instance=ExtResource("5_36cay")]
+position = Vector2(2721, 611)
+
+[node name="Painting12" parent="Paintings" instance=ExtResource("5_36cay")]
+position = Vector2(2921, 1187)
+
+[node name="Painting13" parent="Paintings" instance=ExtResource("5_36cay")]
+position = Vector2(1681, 1515)
+
+[node name="Painting14" parent="Paintings" instance=ExtResource("5_36cay")]
+position = Vector2(2389, 1396)
+
+[node name="Painting15" parent="Paintings" instance=ExtResource("5_36cay")]
+position = Vector2(2172, 1412)
+
+[node name="Painting16" parent="Paintings" instance=ExtResource("5_36cay")]
+position = Vector2(2202, 1578)
+
+[node name="Painting17" parent="Paintings" instance=ExtResource("5_36cay")]
+position = Vector2(3003, 1518)
+
+[node name="Painting18" parent="Paintings" instance=ExtResource("5_36cay")]
+position = Vector2(3198, 1823)
+
+[node name="Painting19" parent="Paintings" instance=ExtResource("5_36cay")]
+position = Vector2(2689, 1793)
+
+[node name="Painting20" parent="Paintings" instance=ExtResource("5_36cay")]
+position = Vector2(2393, 1866)
+
+[node name="Painting21" parent="Paintings" instance=ExtResource("5_36cay")]
+position = Vector2(1168, 1540)
+
+[node name="Painting22" parent="Paintings" instance=ExtResource("5_36cay")]
+position = Vector2(595, 1552)
+
+[node name="Painting23" parent="Paintings" instance=ExtResource("5_36cay")]
+position = Vector2(133, 1557)
+
+[node name="Painting24" parent="Paintings" instance=ExtResource("5_36cay")]
+position = Vector2(164, 1875)
+
+[node name="Painting25" parent="Paintings" instance=ExtResource("5_36cay")]
+position = Vector2(1237, 1866)
+
 [node name="Exit" parent="." instance=ExtResource("6_ovkeg")]
-position = Vector2(607, 764)
+position = Vector2(3458, 896)
+rotation = 1.5708
 
 [editable path="Player"]
 [editable path="Player/PlayerCharacter/PlayerCamera"]
