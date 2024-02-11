@@ -9,12 +9,12 @@ func _physics_process(delta):
 
 func _ready():
 	var datafile :Dictionary = JSON.parse_string(FileAccess.open("res://data/gamedata.json",FileAccess.READ).get_as_text())
-	print(randi() % len(datafile.painting))
-	print(datafile.painting[randi() % len(datafile.painting)])
+	#print(randi() % len(datafile.painting))
+	#print()
 	var http_request = HTTPRequest.new()
 	add_child(http_request)
 	http_request.request_completed.connect(self._http_request_completed)
-	var error = http_request.request("")
+	var error = http_request.request(datafile.painting[randi() % len(datafile.painting)])
 	if error != OK:
 		print("An error occurred in the HTTP request.")
 		get_child(0).set_texture(load("res://Assets/painting.png"))
