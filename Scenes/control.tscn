@@ -126,10 +126,10 @@ texture_pressed = ExtResource("8_mheyw")
 
 [node name="label placeholder" type="Control" parent="idle"]
 anchors_preset = 0
-offset_left = 1020.0
-offset_top = 37.0
-offset_right = 1020.0
-offset_bottom = 37.0
+offset_left = 47.0
+offset_top = 41.0
+offset_right = 47.0
+offset_bottom = 41.0
 
 [node name="label placeholder2" type="Control" parent="idle"]
 anchors_preset = 0
