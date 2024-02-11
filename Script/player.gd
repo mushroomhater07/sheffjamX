@@ -37,7 +37,7 @@ func _physics_process(delta):
 		frame_speed_vector[0] = -1
 		player_sprite.scale.x = -2
 		nothing_pressed = false
-		$bag.set_scale(Vector2(b-ag_size,bag_size))
+		$bag.set_scale(Vector2(-bag_size,bag_size))
 	if Input.is_action_pressed("right"):
 		frame_speed_vector[0] = 1
 		player_sprite.scale.x = 2

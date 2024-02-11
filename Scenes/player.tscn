@@ -61,10 +61,6 @@ _data = {
 
 [node name="PlayerCharacter" type="CharacterBody2D" parent="."]
 script = ExtResource("1_iim0t")
-max_speed = null
-bag_size = null
-acceleration = null
-deceleration = null
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="PlayerCharacter"]
 scale = Vector2(2, 2)
