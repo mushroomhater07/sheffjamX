@@ -18,7 +18,6 @@
 [ext_resource type="Texture2D" uid="uid://f8s3dvjvdhkp" path="res://Assets/UI/stat (2).png" id="15_8kas2"]
 [ext_resource type="Texture2D" uid="uid://c1ny5pg4h5b13" path="res://Assets/UI/sound.png" id="16_d3773"]
 
-
 [node name="main_control" type="Node"]
 script = ExtResource("1_8y7km")
 
