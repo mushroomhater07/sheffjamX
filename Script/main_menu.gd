@@ -17,13 +17,13 @@ func data_init():
 	var gameobject2 = gameobjecttemplate.instantiate()
 	gameobject2.setlabel1("Balance: ")
 	gameobject2.setlabel2(datafile.current_stat["money"])
-	reparent($options/stat/ScrollContainer/VFlowContainer)
-	$options/stat/ScrollContainer/VFlowContainer.add_child(gameobject2)
+	reparent($"idle/label placeholder")
+	$"idle/label placeholder".add_child(gameobject2)
 	gameobject2 = gameobjecttemplate.instantiate()
 	gameobject2.setlabel1("Mute: ")
 	gameobject2.setlabel2(muted)
-	reparent($options/stat/ScrollContainer/VFlowContainer)
-	$options/stat/ScrollContainer/VFlowContainer.add_child(gameobject2)
+	reparent($"idle/label placeholder2")
+	$"idle/label placeholder2".add_child(gameobject2)
 
 	for key in datafile.all_time_stat:
 		var gameobject1 = gameobjecttemplate.instantiate()
