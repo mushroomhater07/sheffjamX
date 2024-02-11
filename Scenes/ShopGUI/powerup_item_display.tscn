@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://sjwf12v1q871"]
+
+[ext_resource type="Texture2D" uid="uid://0fyega4djogo" path="res://Assets/tilemap.png" id="1_e2dj5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sr1w7"]
+atlas = ExtResource("1_e2dj5")
+region = Rect2(119, 153, 17, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_52wcj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sr1w7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="PowerupItemDisplay" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(52, 53)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_52wcj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 105.0
+offset_bottom = 100.0
+color = Color(0, 0, 0, 1)
+
+[node name="NotBoughtYet" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 24.0
+offset_right = 101.0
+offset_bottom = 124.0
+text = "Not Bought yet"
+horizontal_alignment = 1
+autowrap_mode = 3

@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://cplc3bqonaang"]
+
+[ext_resource type="PackedScene" uid="uid://sjwf12v1q871" path="res://Scenes/ShopGUI/powerup_item_display.tscn" id="1_8di1j"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hodmx"]
+font_size = 40
+font_color = Color(0, 0, 0, 1)
+
+[node name="ShopPlayerInventoryPowerups" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 647.0
+offset_bottom = 224.0
+color = Color(0.709804, 0.709804, 0.709804, 1)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Powerups:"
+label_settings = SubResource("LabelSettings_hodmx")
+
+[node name="PowerupItemDisplay" parent="." instance=ExtResource("1_8di1j")]
+layout_mode = 1
+offset_left = 27.0
+offset_top = 77.0
+offset_right = -5.0
+offset_bottom = 90.0
+
+[node name="PowerupItemDisplay2" parent="." instance=ExtResource("1_8di1j")]
+layout_mode = 1
+offset_left = 196.0
+offset_top = 104.0
+offset_right = 196.0
+offset_bottom = 104.0
