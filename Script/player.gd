@@ -72,3 +72,7 @@ func _on_ghost_timer_timeout():
 	get_parent().add_child(afterimage)
 	afterimage.global_position = global_position
 	
+
+
+func _on_area_2d_body_entered(body):
+	pass # Replace with function body.
