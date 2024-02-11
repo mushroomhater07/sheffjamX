@@ -23,12 +23,13 @@ func _ready():
 func _http_request_completed(result, response_code, headers, body):
 	if result != HTTPRequest.RESULT_SUCCESS:
 		print("Image couldn't be downloaded. Try a different image.")
-		get_child(0).set_texture("res://Assets/painting.png")
+		get_child(0).set_texture(load("res://Assets/painting.png"))
 	var image = Image.new()
 	var error = image.load_png_from_buffer(body)
 	if error != OK:
 		push_error("Couldn't load the image.")
 		get_child(0).set_texture("res://Assets/painting.png")
+		get_child(0).set_texture(load("res://Assets/painting.png"))
 	get_child(0).set_texture(ImageTexture.create_from_image(image))
 	
 func _on_area_2d_area_entered(area):
