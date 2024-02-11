@@ -67,7 +67,7 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_8o440")
 
 [node name="bag" type="Area2D" parent="PlayerCharacter/PlayerSprite"]
-position = Vector2(8.5, 1)
+position = Vector2(-13.5, 0.5)
 scale = Vector2(0.5, 0.5)
 collision_mask = 6
 
