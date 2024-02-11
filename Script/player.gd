@@ -37,12 +37,12 @@ func _physics_process(delta):
 		frame_speed_vector[0] = -1
 		player_sprite.scale.x = -2
 		nothing_pressed = false
-		$bag.set_scale(Vector2(-bag_size,bag_size))
+		$PlayerSprite/bag.set_scale(Vector2(-bag_size,bag_size))
 	if Input.is_action_pressed("right"):
 		frame_speed_vector[0] = 1
 		player_sprite.scale.x = 2
 		nothing_pressed = false
-		$bag.set_scale(Vector2(bag_size,bag_size))
+		$PlayerSprite/bag.set_scale(Vector2(bag_size,bag_size))
 	
 	frame_speed_vector = frame_speed_vector.normalized()
 	if nothing_pressed:
@@ -63,7 +63,7 @@ func _physics_process(delta):
 	if (velocity != Vector2.ZERO):
 		$"../AnimationPlayer".play("move")
 	
-	$bag.set_scale(Vector2(bag_size,bag_size))
+	$PlayerSprite/bag.set_scale(Vector2(bag_size,bag_size))
 	move_and_slide()
 	
 func _on_detection_hitbox_body_entered(_body):
