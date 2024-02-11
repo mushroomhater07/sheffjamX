@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://8vhagqqfa0ib"]
+
+[ext_resource type="Script" path="res://Scenes/ShopGUI/shop_inventory_consumables.gd" id="1_tu1iv"]
+[ext_resource type="PackedScene" uid="uid://chntlscrt8jic" path="res://Scenes/ShopGUI/consumable_icon.tscn" id="2_hmgcs"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kfnpr"]
+font_size = 40
+font_color = Color(0, 0, 0, 1)
+
+[node name="ShopInventoryConsumables" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tu1iv")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 647.0
+offset_bottom = 645.0
+color = Color(0.709804, 0.709804, 0.709804, 1)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 273.0
+offset_bottom = 55.0
+text = "Consumables:"
+label_settings = SubResource("LabelSettings_kfnpr")
+
+[node name="Sneakers" parent="." instance=ExtResource("2_hmgcs")]
+layout_mode = 1
+
+[node name="Hammer" parent="." instance=ExtResource("2_hmgcs")]
+layout_mode = 1
+offset_top = 160.0
+offset_bottom = 160.0
+
+[node name="Flashbang" parent="." instance=ExtResource("2_hmgcs")]
+layout_mode = 1
+offset_top = 320.0
+offset_bottom = 320.0
