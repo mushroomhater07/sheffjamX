@@ -7,9 +7,9 @@ func _physics_process(delta):
 	time += delta
 	position.y += sin(time * 4) * 1
 
-func set_painting():
-	var datafile :Dictionary = JSON.parse_string(FileAccess.open("res://data/userdata.json",FileAccess.READ).get_as_text())
-	
+func _ready():
+	var datafile :Dictionary = JSON.parse_string(FileAccess.open("res://data/gamedata.json",FileAccess.READ).get_as_text())
+	print(datafile.painting[randi() % datafile.painting.length()])
 	var http_request = HTTPRequest.new()
 	add_child(http_request)
 	http_request.request_completed.connect(self._http_request_completed)
