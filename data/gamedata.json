@@ -1,0 +1,68 @@
+{
+  "consumable": [
+	{
+	"wrench":{
+	  "descpt": "break the window",
+	  "price": 10,
+	  "powerup": false,
+	  "powerup_duration": null
+	}},
+	{
+	"silent":{
+	  "descpt": "walk lightly with bare foot",
+	  "price": 10,
+	  "powerup": true,
+	  "powerup_duration": 10
+	}},
+	{
+	"flashbang":{
+	  "descpt": "brighter than your future",
+	  "price": 10,
+	  "powerup": true,
+	  "powerup_duration": 15
+	}},
+	{
+	"stopper":{
+	  "descpt": "better make good use of time stopping devices",
+	  "price": 10,
+	  "powerup": true,
+	  "powerup_duration": 15
+	}},
+	{
+	"lightout":{
+	  "descpt": "where is my wifi???",
+	  "price": 10,
+	  "powerup": true,
+	  "powerup_duration": 15
+	}},
+	{
+	"zipline":{
+	  "descpt": "My name's Zip. Zipline.",
+	  "price": 10,
+	  "powerup": true,
+	  "powerup_duration": 15
+	}},
+	{
+	"camouflage":{
+	  "descpt": "(you cant see me)^2",
+	  "price": 10,
+	  "powerup": true,
+	  "powerup_duration": 15
+	}},
+	{
+	"guard_outfit":{
+	  "descpt": "First day at work :)",
+	  "price": 1500,
+	  "powerup": true,
+	  "powerup_duration": 15
+	}}
+  ],
+  "painting":[
+	"https://art.pixilart.com/sr2ec1f3c3e58aws3.png",
+	"https://art.pixilart.com/watermark/sr2351b4ab6a12c.png",
+	"https://art.pixilart.com/sr2f814dfa6fbaws3.png",
+	"https://art.pixilart.com/e6361beebab48a9.png",
+	"https://art.pixilart.com/sr26853a0a7edaws3.png",
+	"https://art.pixilart.com/sr2afa4d17328aws3.png"
+  ]
+}
