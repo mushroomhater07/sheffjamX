@@ -72,7 +72,5 @@ func _on_ghost_timer_timeout():
 	get_parent().add_child(afterimage)
 	afterimage.global_position = global_position
 	
-
-
 func _on_area_2d_body_entered(body):
 	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
