@@ -15,12 +15,12 @@ func data_init():
 	mute(false);
 	var gameobjecttemplate = preload("res://Scenes/label.tscn")
 	var gameobject2 = gameobjecttemplate.instantiate()
-	gameobject2.setlabel1("Balance: ")
+	gameobject2.setlabel1("Balance")
 	gameobject2.setlabel2(datafile.current_stat["money"])
 	print(get_node("idle/lablel placeholder2"))
 	$"idle/label placeholder".add_child(gameobject2)
 	gameobject2 = gameobjecttemplate.instantiate()
-	gameobject2.setlabel1("Mute: ")
+	gameobject2.setlabel1("Mute")
 	gameobject2.setlabel2(muted)
 	$"idle/label placeholder2".add_child(gameobject2)
 
