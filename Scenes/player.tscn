@@ -6,10 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://d4je58vlt02cy" path="res://Assets/light.png" id="3_hs1uh"]
 [ext_resource type="PackedScene" uid="uid://c8n57cm8dalnm" path="res://Scenes/Consumables/wrench.tscn" id="4_vb147"]
 [ext_resource type="Script" path="res://Script/Consumables/ConsumableManager.gd" id="5_u1787"]
-[ext_resource type="PackedScene" uid="uid://r87ipttqo0vi" path="res://Scenes/Consumables/flash_bang.tscn" id="6_dlv4f"]
+[ext_resource type="PackedScene" path="res://Scenes/Consumables/flash_bang.tscn" id="6_dlv4f"]
 [ext_resource type="PackedScene" path="res://Scenes/Consumables/lights_out.tscn" id="6_gsjt7"]
-[ext_resource type="PackedScene" uid="uid://dp2hldfgkwhpc" path="res://Scenes/Consumables/speed_boost.tscn" id="6_ibht0"]
-[ext_resource type="PackedScene" uid="uid://b6u4b2tgdvet" path="res://Scenes/Consumables/silent_shoes.tscn" id="6_xcoft"]
+[ext_resource type="PackedScene" path="res://Scenes/Consumables/speed_boost.tscn" id="6_ibht0"]
+[ext_resource type="PackedScene" path="res://Scenes/Consumables/silent_shoes.tscn" id="6_xcoft"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7rw21"]
 atlas = ExtResource("1_af7mq")
@@ -59,7 +59,6 @@ _data = {
 script = ExtResource("1_iim0t")
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="PlayerCharacter"]
-position = Vector2(0, -2.51786)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_8o440")
 
