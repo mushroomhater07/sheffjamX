@@ -18,7 +18,7 @@ func data_init():
 		print(key)
 		var gameobject1 = gameobjecttemplate.instantiate()
 		gameobject1.setlabel1(key)
-		gameobject1.setlabel2(datafile.all_time_stat[key])
+		gameobject1.setlabel2(str(datafile.all_time_stat[key]))
 		$options/stat/ScrollContainer/VFlowContainer.add_child(gameobject1)
 
 	#$"idle/lablel placeholder2".add_child(gameobject1)
