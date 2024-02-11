@@ -7,8 +7,9 @@ func _physics_process(delta):
 	time += delta
 	position.y += sin(time * 4) * 1
 
-func set_painting(location):
-	# Create an HTTP request node and connect its completion signal.
+func set_painting():
+	var datafile :Dictionary = JSON.parse_string(FileAccess.open("res://data/userdata.json",FileAccess.READ).get_as_text())
+	
 	var http_request = HTTPRequest.new()
 	add_child(http_request)
 	http_request.request_completed.connect(self._http_request_completed)
