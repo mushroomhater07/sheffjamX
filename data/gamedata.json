@@ -1,51 +1,58 @@
 {
   "consumable": [
 	{
-	"wrench":{
-	  "descpt": "break the window",
-	  "price": 10,
+	"Hammer":{
+	  "descpt": "You can smash windows, and exit the level from anywhere",
+	  "price": 100,
 	  "powerup": false,
 	  "powerup_duration": null
 	}},
 	{
-	"silent":{
-	  "descpt": "walk lightly with bare foot",
-	  "price": 10,
+	"Sneakers":{
+	  "descpt": "silent sneakers let you sneak past the guards for a while",
+	  "price": 100,
 	  "powerup": true,
 	  "powerup_duration": 10
 	}},
 	{
-	"flashbang":{
-	  "descpt": "brighter than your future",
-	  "price": 10,
+	"Flashbang":{
+	  "descpt": "temporarily blinds the guards for a few seconds",
+	  "price": 100,
 	  "powerup": true,
 	  "powerup_duration": 15
 	}},
 	{
 	"stopper":{
 	  "descpt": "better make good use of time stopping devices",
-	  "price": 10,
+	  "price": 100,
 	  "powerup": true,
 	  "powerup_duration": 15
 	}},
 	{
-	"lightout":{
-	  "descpt": "where is my wifi???",
-	  "price": 10,
+	"SpeedBoost":{
+	  "descpt": "zooooooom!",
+	  "price": 150,
+	  "powerup": true,
+	  "powerup_duration": 15
+	}},
+	{
+	"LightsOut":{
+	  "descpt": "who turned the lights off??",
+	  "price": 100,
 	  "powerup": true,
 	  "powerup_duration": 15
 	}},
 	{
 	"zipline":{
 	  "descpt": "My name's Zip. Zipline.",
-	  "price": 10,
+	  "price": 100,
 	  "powerup": true,
 	  "powerup_duration": 15
 	}},
 	{
 	"camouflage":{
 	  "descpt": "(you cant see me)^2",
-	  "price": 10,
+	  "price": 100,
 	  "powerup": true,
 	  "powerup_duration": 15
 	}},

@@ -1,11 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dhrx7t4ux7a2g"]
+[gd_scene load_steps=3 format=3 uid="uid://dhrx7t4ux7a2g"]
 
 [ext_resource type="Script" path="res://Scenes/ShopGUI/shop_inventory_consumables.gd" id="1_tu1iv"]
 [ext_resource type="PackedScene" uid="uid://hi5o6klk4wsb" path="res://Scenes/ShopGUI/consumable_icon.tscn" id="2_hmgcs"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_kfnpr"]
-font_size = 40
-font_color = Color(0, 0, 0, 1)
 
 [node name="ShopInventoryConsumables" type="Control"]
 layout_mode = 3
@@ -21,44 +17,35 @@ script = ExtResource("1_tu1iv")
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
 offset_right = 647.0
-offset_bottom = 645.0
+offset_bottom = 549.0
 color = Color(0.709804, 0.709804, 0.709804, 1)
-
-[node name="Title" type="Label" parent="."]
-layout_mode = 0
-offset_left = 5.0
-offset_right = 273.0
-offset_bottom = 55.0
-text = "Consumables:"
-label_settings = SubResource("LabelSettings_kfnpr")
 
 [node name="Sneakers" parent="." instance=ExtResource("2_hmgcs")]
 layout_mode = 1
-offset_top = 50.0
-offset_right = -647.0
-offset_bottom = 50.0
+offset_right = 18.0
+offset_bottom = -483.0
 
 [node name="Hammer" parent="." instance=ExtResource("2_hmgcs")]
 layout_mode = 1
-offset_top = 170.0
-offset_right = -647.0
-offset_bottom = 170.0
+offset_top = 110.0
+offset_right = -4.0
+offset_bottom = -369.0
 
 [node name="Flashbang" parent="." instance=ExtResource("2_hmgcs")]
 layout_mode = 1
-offset_top = 290.0
-offset_right = -647.0
-offset_bottom = 290.0
+offset_top = 220.0
+offset_right = 9.0
+offset_bottom = -259.0
 
 [node name="LightsOut" parent="." instance=ExtResource("2_hmgcs")]
 layout_mode = 1
-offset_top = 410.0
-offset_right = -647.0
-offset_bottom = -207.0
+offset_top = 330.0
+offset_right = 9.0
+offset_bottom = -137.0
 
 [node name="SpeedBoost" parent="." instance=ExtResource("2_hmgcs")]
 layout_mode = 1
 offset_left = 1.0
-offset_top = 530.0
-offset_right = -646.0
-offset_bottom = -87.0
+offset_top = 440.0
+offset_right = 35.0
+offset_bottom = -48.0
