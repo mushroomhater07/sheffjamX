@@ -17,6 +17,7 @@ func data_init():
 	var gameobject2 = gameobjecttemplate.instantiate()
 	gameobject2.setlabel1("Balance: ")
 	gameobject2.setlabel2(datafile.current_stat["money"])
+	print($"idle/label placeholder")
 	reparent($"idle/label placeholder")
 	$"idle/label placeholder".add_child(gameobject2)
 	gameobject2 = gameobjecttemplate.instantiate()
