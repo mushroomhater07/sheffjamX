@@ -10,5 +10,5 @@ func _ready():
 func setlabel1(text1):
 	get_child(0).get_child(0).set_text(str(text1))
 
-func setlabel2(text1 : String):
+func setlabel2(text1):
 	get_child(0).get_child(1).set_text(str(text1))
