@@ -101,14 +101,14 @@ script = ExtResource("5_u1787")
 [node name="GhostTimer" type="Timer" parent="PlayerCharacter"]
 wait_time = 0.1
 
-[node name="Area2D" type="Area2D" parent="PlayerCharacter"]
+[node name="bag" type="Area2D" parent="PlayerCharacter"]
 position = Vector2(17, 2)
 
-[node name="Sprite2D" type="Sprite2D" parent="PlayerCharacter/Area2D"]
+[node name="Sprite2D" type="Sprite2D" parent="PlayerCharacter/bag"]
 texture = ExtResource("11_82mw7")
 flip_h = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCharacter/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCharacter/bag"]
 position = Vector2(-0.5, 1.5)
 shape = SubResource("RectangleShape2D_0xh50")
 
@@ -119,4 +119,4 @@ libraries = {
 
 [connection signal="body_entered" from="PlayerCharacter/DetectionHitbox" to="PlayerCharacter" method="_on_detection_hitbox_body_entered"]
 [connection signal="timeout" from="PlayerCharacter/GhostTimer" to="PlayerCharacter" method="_on_ghost_timer_timeout"]
-[connection signal="body_entered" from="PlayerCharacter/Area2D" to="PlayerCharacter" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="PlayerCharacter/bag" to="PlayerCharacter" method="_on_bag_body_entered"]
