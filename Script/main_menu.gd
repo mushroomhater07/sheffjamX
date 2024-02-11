@@ -12,7 +12,7 @@ func data_init():
 	datafile = JSON.parse_string(FileAccess.open("res://data/userdata.json",FileAccess.READ).get_as_text())
 	#var datafile = JSON.parse_string(FileAccess.get_file_as_string("res://data/userdata.json"))
 	muted = datafile.setting.mute
-	mute(false);
+	
 	var gameobjecttemplate = preload("res://Scenes/label.tscn")
 	var gameobject2 = gameobjecttemplate.instantiate()
 	gameobject2.setlabel1("Balance")
@@ -26,6 +26,7 @@ func data_init():
 	gameobject2.setblack()
 	$"idle/label placeholder2".add_child(gameobject2)
 
+	mute(false);
 	for key in datafile.all_time_stat:
 		var gameobject1 = gameobjecttemplate.instantiate()
 		gameobject1.setlabel1(key)
