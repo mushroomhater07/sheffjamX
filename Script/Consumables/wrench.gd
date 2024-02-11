@@ -11,6 +11,7 @@ func _ready():
 	is_used = false
 
 func use():
+	print("using hammer")
 	if is_used:
 		return
 	if use_radius.has_overlapping_areas():

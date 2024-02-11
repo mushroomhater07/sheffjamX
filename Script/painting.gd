@@ -33,7 +33,7 @@ func _http_request_completed(result, response_code, headers, body):
 	
 func _on_area_2d_area_entered(area):
 
-	var player : Player = area.get_parent()
+	var player = area.get_parent()
 	player.max_speed *= 0.9
 	clampf(player.max_speed, 125, 300)
 	player.bag_size += 0.2

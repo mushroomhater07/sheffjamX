@@ -1,7 +1,6 @@
+[gd_scene load_steps=18 format=3 uid="uid://hi5o6klk4wsb"]
 
-[gd_scene load_steps=16 format=3 uid="uid://hi5o6klk4wsb"]
-
-[ext_resource type="Script" path="res://Scenes/ShopGUI/consumable_icon.gd" id="1_2rmtq"]
+[ext_resource type="Script" path="res://Script/ShopGUI/consumable_icon.gd" id="1_2rmtq"]
 [ext_resource type="Texture2D" uid="uid://durtblpj3hxj3" path="res://Assets/ShopItems/SneakersNotBought.png" id="1_s4i0x"]
 [ext_resource type="Texture2D" uid="uid://dhrxtm2aopgh7" path="res://Assets/ShopItems/HammerNotBought.png" id="2_5han6"]
 [ext_resource type="Texture2D" uid="uid://ombuaiqtatif" path="res://Assets/ShopItems/Sneakers.png" id="2_awhsw"]
@@ -10,7 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://dhy862heejl2r" path="res://Assets/ShopItems/Flashbang.png" id="3_ixgru"]
 [ext_resource type="Texture2D" uid="uid://d3e1mrxjx3ays" path="res://Assets/ShopItems/LightsOutNotBought.png" id="6_mvwn2"]
 [ext_resource type="Texture2D" uid="uid://ddy1y4r2jdpvx" path="res://Assets/ShopItems/LightsOut.png" id="7_hhoit"]
+[ext_resource type="Texture2D" uid="uid://dmvji3tpvlx7l" path="res://Assets/ShopItems/SpeedBoostNotBought.png" id="10_4kuvp"]
 [ext_resource type="PackedScene" uid="uid://dcpx3trhb858g" path="res://Scenes/ShopGUI/select_button.tscn" id="10_6jfeb"]
+[ext_resource type="Texture2D" uid="uid://w31hekvwa5s5" path="res://Assets/ShopItems/SpeedBoost.png" id="11_5xuqy"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7hrd0"]
 font_color = Color(0, 0, 0, 1)
@@ -60,6 +61,17 @@ animations = [{
 "loop": true,
 "name": &"Sneakers",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_4kuvp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5xuqy")
+}],
+"loop": true,
+"name": &"SpeedBoost",
+"speed": 5.0
 }]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8s02p"]
@@ -106,7 +118,7 @@ position = Vector2(63, 50)
 rotation = 0.349066
 scale = Vector2(3.5, 3.558)
 sprite_frames = SubResource("SpriteFrames_ufx7u")
-animation = &"LightsOut"
+animation = &"SpeedBoost"
 
 [node name="Price" type="Label" parent="."]
 layout_mode = 0

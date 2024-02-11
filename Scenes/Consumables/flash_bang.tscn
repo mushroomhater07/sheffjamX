@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://r87ipttqo0vi"]
 
-[ext_resource type="Texture2D" path="res://Assets/flashbang.png" id="1_2dguk"]
+[ext_resource type="Texture2D" uid="uid://cuyf0nmo4hrph" path="res://Assets/flashbang.png" id="1_2dguk"]
 [ext_resource type="Script" path="res://Script/Consumables/flash_bang.gd" id="1_g4rwg"]
 [ext_resource type="Texture2D" uid="uid://d4je58vlt02cy" path="res://Assets/light.png" id="3_upfuq"]
 

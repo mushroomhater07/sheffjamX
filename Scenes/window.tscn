@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bwxt27drd41y6"]
+[gd_scene load_steps=5 format=3 uid="uid://bwxt27drd41y6"]
 
 [ext_resource type="Texture2D" uid="uid://fc006hu0d2kb" path="res://Assets/window.png" id="1_n1wra"]
 [ext_resource type="Script" path="res://Script/window.gd" id="1_v2xog"]
+[ext_resource type="PackedScene" uid="uid://bec86gd75or6p" path="res://Scenes/exit.tscn" id="3_vvrfs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bf6j6"]
 size = Vector2(62, 30)
@@ -17,5 +18,8 @@ collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_bf6j6")
+
+[node name="Exit" parent="." instance=ExtResource("3_vvrfs")]
+visible = false
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

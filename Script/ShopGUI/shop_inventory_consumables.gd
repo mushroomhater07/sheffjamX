@@ -14,7 +14,7 @@ func _process(delta):
 	pass
 
 func init_all(shop_items, price_dict, count_dict, description_dict, select_buttons):
-	update_sprites(count_dict)
+	update_sprites(count_dict, select_buttons)
 	for key in shop_items:
 		var item_name:String = key
 		var node = get_node(NodePath(item_name))
@@ -36,18 +36,22 @@ func button_pressesd(item_name):
 	shop_item_pressed.emit(item_name)
 
 
-func update_sprites(inventory):
-	for key in inventory:
+func update_sprites(inventory, player_inv):
+	for key in inventory.keys():
 		var node:Control = get_node(key)
 		var sprite:AnimatedSprite2D = node.get_node("Sprite")
 		sprite.animation = key
-		if inventory[key] == 0:
-			sprite.frame = 0
-		else:
+		if inventory[key] == 0  and not player_inv:
+			print("sold", key)
 			sprite.frame = 1
+			node.get_node("SoldLabel").set_visible(true)
+		else:
+			if inventory[key] == 0:
+				sprite.frame = 0
+			else:
+				sprite.frame = 1
 
 func update_select_buttons(selected, ignore_all=false):
-	print("updating: "+str(selected))
 	for item in shop.current_shop_items:
 		var button_node:Control = get_node(item+"/SelectButton")
 		if ignore_all:

@@ -17,6 +17,8 @@ var current_speed:Vector2 = Vector2(0, 0)
 var sneaking : bool
 signal stopped_sneaking
 
+var item:String
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -66,9 +68,14 @@ func _physics_process(delta):
 		$"../AnimationPlayer".play("move")
 
 	move_and_slide()
+
+func init(selected_item):
+	if not selected_item:
+		selected_item = ""
+	item = selected_item
 	
 func _on_detection_hitbox_body_entered(_body):
-	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
+	game_over(false)
 
 func _on_ghost_timer_timeout():
 	var afterimage = preload("res://Scenes/after_image.tscn").instantiate()
@@ -79,4 +86,13 @@ func _on_ghost_timer_timeout():
 	
 
 func _on_bag_body_entered(body):
-	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
+	game_over(false)
+
+func game_over(victory):
+	var game_over_node = load("res://Scenes/game_over.tscn").instantiate()
+	game_over_node.init(victory)
+	var control_node = get_node("/root")
+	control_node.add_child(game_over_node)
+	control_node.get_node("MuseumGame").queue_free()
+	
+

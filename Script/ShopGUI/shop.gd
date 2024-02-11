@@ -41,6 +41,7 @@ func _process(delta):
 
 func read_gamedata():
 	var datafile = JSON.parse_string(FileAccess.open("res://data/gamedata.json",FileAccess.READ).get_as_text())
+	
 	var consumables = datafile["consumable"]
 	for i in range(len(consumables)):
 		var item_dict:Dictionary = consumables[i]
@@ -49,6 +50,21 @@ func read_gamedata():
 				var data_dict = item_dict[key]
 				descriptions[key] = data_dict["descpt"]
 				prices[key] = data_dict["price"]
+
+func store_gamedata():
+	var datafile = JSON.parse_string(FileAccess.open("res://data/gamedata.json",FileAccess.READ).get_as_text())
+	var consumables:Array = datafile["consumable"]
+	for i in range(len(consumables)):
+		var item_dict:Dictionary = consumables[i]
+		for key in item_dict:
+			if key in current_shop_items:
+				var data_dict = item_dict[key]
+				data_dict["descpt"] = descriptions[key]
+				data_dict["price"] = prices[key]
+				consumables[i] = data_dict
+				
+	
+	datafile["consumable"] = consumables
 
 func read_playerdata():
 	var datafile = JSON.parse_string(FileAccess.open("res://data/userdata.json",FileAccess.READ).get_as_text())
@@ -79,6 +95,9 @@ func item_buy(item_name):
 	if prices[item_name] > money:
 		print("cant afford!")
 		return
+	if player_inventory[item_name]>0:
+		print("already owned!")
+		return
 	
 	money -= prices[item_name]
 	update_money()
@@ -87,7 +106,7 @@ func item_buy(item_name):
 	shop_page.get_node("ShopInventoryConsumables").get_node(item_name).sold()
 	
 	player_inventory[item_name] += 1
-	player_page.get_node("ShopInventoryConsumables").update_sprites(player_inventory)
+	player_page.get_node("ShopInventoryConsumables").update_sprites(player_inventory, true)
 	player_page.get_node("ShopInventoryConsumables").update_select_buttons(selected_item)
 	
 	
@@ -106,3 +125,4 @@ func new_game():
 	var museum_game = load("res://Scenes/museum_game.tscn").instantiate()
 	get_parent().add_child(museum_game)
 	queue_free()
+	museum_game.get_node("Player/PlayerCharacter").init(selected_item)

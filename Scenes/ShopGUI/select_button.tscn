@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dcpx3trhb858g"]
 
-[ext_resource type="Script" path="res://Scenes/ShopGUI/select_button.gd" id="1_e1wwv"]
+[ext_resource type="Script" path="res://Script/ShopGUI/select_button.gd" id="1_e1wwv"]
 [ext_resource type="Texture2D" uid="uid://2emdp2f16a10" path="res://Assets/UI/Select_this_powerup.png" id="1_j7ysj"]
 [ext_resource type="Texture2D" uid="uid://v5mnk2iyag3e" path="res://Assets/UI/Selected.png" id="2_mqfbi"]
 [ext_resource type="Texture2D" uid="uid://behd1psbyacrt" path="res://Assets/UI/empty.png" id="4_6m2kq"]
