@@ -14,7 +14,17 @@ func data_init():
 	muted = datafile.setting.mute
 	mute(false);
 	var gameobjecttemplate = preload("res://Scenes/label.tscn")
-	
+	var gameobject2 = gameobjecttemplate.instantiate()
+	gameobject2.setlabel1("Balance: ")
+	gameobject2.setlabel2(datafile.current_stat["money"])
+	reparent($options/stat/ScrollContainer/VFlowContainer)
+	$options/stat/ScrollContainer/VFlowContainer.add_child(gameobject2)
+	gameobject2 = gameobjecttemplate.instantiate()
+	gameobject2.setlabel1("Mute: ")
+	gameobject2.setlabel2(muted)
+	reparent($options/stat/ScrollContainer/VFlowContainer)
+	$options/stat/ScrollContainer/VFlowContainer.add_child(gameobject2)
+
 	for key in datafile.all_time_stat:
 		var gameobject1 = gameobjecttemplate.instantiate()
 		gameobject1.setlabel1(key)
