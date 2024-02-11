@@ -1,0 +1,69 @@
+[gd_scene load_steps=6 format=3 uid="uid://c281ss30fj7en"]
+
+[ext_resource type="Texture2D" uid="uid://cl7kayd6urcsp" path="res://Assets/InventorySlots - Copy.png" id="1_17uim"]
+[ext_resource type="Texture2D" uid="uid://ombuaiqtatif" path="res://Assets/ShopItems/Sneakers.png" id="2_hnal2"]
+[ext_resource type="Texture2D" uid="uid://ddy1y4r2jdpvx" path="res://Assets/ShopItems/LightsOut.png" id="3_0vau7"]
+[ext_resource type="Texture2D" uid="uid://dxuxcfkiujq1j" path="res://Assets/ShopItems/Hammer.png" id="4_s8wsb"]
+[ext_resource type="Texture2D" uid="uid://dhy862heejl2r" path="res://Assets/ShopItems/Flashbang.png" id="5_cpnuv"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 469.0
+offset_top = 651.0
+offset_right = 561.0
+offset_bottom = 684.0
+scale = Vector2(5, 3.412)
+texture = ExtResource("1_17uim")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 497.0
+offset_top = 665.0
+offset_right = 514.0
+offset_bottom = 689.0
+scale = Vector2(3.8, 2.593)
+texture = ExtResource("2_hnal2")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 582.0
+offset_top = 677.0
+offset_right = 599.0
+offset_bottom = 701.0
+scale = Vector2(3.8, 2.593)
+texture = ExtResource("3_0vau7")
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 667.0
+offset_top = 676.0
+offset_right = 684.0
+offset_bottom = 700.0
+scale = Vector2(3.8, 2.593)
+texture = ExtResource("4_s8wsb")
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 734.0
+offset_top = 669.0
+offset_right = 766.0
+offset_bottom = 702.0
+scale = Vector2(3, 2.047)
+texture = ExtResource("5_cpnuv")
+
+[node name="TextureRect6" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 838.0
+offset_top = 676.0
+offset_right = 855.0
+offset_bottom = 700.0
+scale = Vector2(3.8, 2.593)
+texture = ExtResource("4_s8wsb")
