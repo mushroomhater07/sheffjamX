@@ -23,6 +23,7 @@ func data_init():
 	gameobject2 = gameobjecttemplate.instantiate()
 	gameobject2.setlabel1("Mute")
 	gameobject2.setlabel2(muted)
+	gameobject2.setblack()
 	$"idle/label placeholder2".add_child(gameobject2)
 
 	for key in datafile.all_time_stat:
