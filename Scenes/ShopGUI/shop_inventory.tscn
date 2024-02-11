@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dw8vwdrp7eneo"]
+[gd_scene load_steps=4 format=3 uid="uid://pww8v6a4n7a4"]
 
 [ext_resource type="Script" path="res://Scenes/ShopGUI/shop_inventory.gd" id="1_ibamx"]
-[ext_resource type="PackedScene" uid="uid://8vhagqqfa0ib" path="res://Scenes/ShopGUI/shop_inventory_consumables.tscn" id="1_jg46d"]
+[ext_resource type="PackedScene" uid="uid://dhrx7t4ux7a2g" path="res://Scenes/ShopGUI/shop_inventory_consumables.tscn" id="1_jg46d"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_h1t0o"]
 font_size = 40
@@ -12,6 +12,7 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -629.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ibamx")
@@ -32,5 +33,5 @@ label_settings = SubResource("LabelSettings_h1t0o")
 layout_mode = 1
 offset_left = 20.0
 offset_top = 103.0
-offset_right = 20.0
-offset_bottom = 103.0
+offset_right = -55.0
+offset_bottom = 1.0

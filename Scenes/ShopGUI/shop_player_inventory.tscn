@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://0dgxwigo0len"]
+[gd_scene load_steps=5 format=3 uid="uid://dh727eqmmtnmh"]
 
 [ext_resource type="Script" path="res://Scenes/ShopGUI/shop_player_inventory.gd" id="1_8uk16"]
-[ext_resource type="PackedScene" uid="uid://8vhagqqfa0ib" path="res://Scenes/ShopGUI/shop_inventory_consumables.tscn" id="2_1upbg"]
+[ext_resource type="PackedScene" uid="uid://dhrx7t4ux7a2g" path="res://Scenes/ShopGUI/shop_inventory_consumables.tscn" id="2_1upbg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_f3enq"]
 font_size = 32
@@ -35,13 +35,6 @@ offset_bottom = 57.0
 text = "You Currently Have:"
 label_settings = SubResource("LabelSettings_f3enq")
 
-[node name="ShopInventoryConsumables" parent="." instance=ExtResource("2_1upbg")]
-layout_mode = 1
-offset_left = 709.0
-offset_top = 100.0
-offset_right = 709.0
-offset_bottom = 100.0
-
 [node name="Money" type="Label" parent="."]
 layout_mode = 0
 offset_left = 1142.0
@@ -50,3 +43,10 @@ offset_right = 1348.0
 offset_bottom = 77.0
 text = "<Money here>"
 label_settings = SubResource("LabelSettings_2we0v")
+
+[node name="ShopInventoryConsumables" parent="." instance=ExtResource("2_1upbg")]
+layout_mode = 1
+offset_left = 709.0
+offset_top = 100.0
+offset_right = -19.0
+offset_bottom = -26.0
