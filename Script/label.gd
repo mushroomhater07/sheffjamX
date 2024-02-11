@@ -8,6 +8,7 @@ func _ready():
 	
 	pass # Replace with function body.
 func setlabel1(text1):
+	print(control)
 	control.get_child(0).set_text(str(text1))
 
 #func setlabel2(text1 : String):
