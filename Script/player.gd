@@ -7,6 +7,8 @@ class_name Player
 @export var max_speed:float = 300
 var current_speed:Vector2 = Vector2(0, 0)
 
+@export var bag_size:float = 1;
+
 ##### speed increase/decrease per sec
 @export var acceleration:float = 10000
 @export var deceleration:float = 10000
