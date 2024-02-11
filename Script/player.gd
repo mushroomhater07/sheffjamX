@@ -37,10 +37,12 @@ func _physics_process(delta):
 		frame_speed_vector[0] = -1
 		player_sprite.scale.x = -2
 		nothing_pressed = false
+		
 	if Input.is_action_pressed("right"):
 		frame_speed_vector[0] = 1
 		player_sprite.scale.x = 2
 		nothing_pressed = false
+		
 	
 	frame_speed_vector = frame_speed_vector.normalized()
 	if nothing_pressed:
