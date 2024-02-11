@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://dcpx3trhb858g"]
+
+[ext_resource type="Script" path="res://Scenes/ShopGUI/select_button.gd" id="1_e1wwv"]
+[ext_resource type="Texture2D" uid="uid://2emdp2f16a10" path="res://Assets/UI/Select_this_powerup.png" id="1_j7ysj"]
+[ext_resource type="Texture2D" uid="uid://v5mnk2iyag3e" path="res://Assets/UI/Selected.png" id="2_mqfbi"]
+[ext_resource type="Texture2D" uid="uid://behd1psbyacrt" path="res://Assets/UI/empty.png" id="4_6m2kq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wio1w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_j7ysj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mqfbi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6m2kq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="SelectButton" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1376.0
+offset_bottom = -768.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e1wwv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_wio1w")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -67.0
+offset_top = -23.0
+offset_right = 67.0
+offset_bottom = 22.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

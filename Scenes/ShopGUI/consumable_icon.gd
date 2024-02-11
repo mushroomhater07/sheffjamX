@@ -2,11 +2,13 @@ extends Control
 
 signal shop_item_pressed
 
+signal select_button_pressed
+
 var item_name:String
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$SelectButton.select_button_pressed.connect(on_select_button_pressed)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -28,10 +30,12 @@ func init(new_item_name, price):
 	set_price(price)
 
 func sold():
-	print(item_name+" sold")
 	$SoldLabel.set_visible(true)
 
 
 func _on_consumable_button_pressed():
-	print("pressed")
 	shop_item_pressed.emit(item_name)
+
+func on_select_button_pressed():
+	select_button_pressed.emit(item_name)
+	

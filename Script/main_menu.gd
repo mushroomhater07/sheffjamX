@@ -7,6 +7,8 @@ var datafile :Dictionary;
 func _ready():
 	data_init()
 	$options.hide();$options/mute.hide();$options/stat.hide();$options/optionchoice.hide();
+	datafile = JSON.parse_string(FileAccess.open("res://data/default_userdata.json",FileAccess.READ).get_as_text())
+	FileAccess.open("res://data/userdata.json", FileAccess.WRITE).store_string ( JSON.stringify(datafile))
 
 func data_init():
 	datafile = JSON.parse_string(FileAccess.open("res://data/userdata.json",FileAccess.READ).get_as_text())
