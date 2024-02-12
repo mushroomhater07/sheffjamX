@@ -13,7 +13,7 @@ config_version=5
 config/name="MuseumHeist"
 run/main_scene="res://Scenes/control.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://Assets/icon.svg"
+config/icon="res://Assets/painting.png"
 
 [display]
 
