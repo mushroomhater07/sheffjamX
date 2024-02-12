@@ -37,5 +37,6 @@ func _on_area_2d_area_entered(area):
 	var player = area.get_parent()
 	player.max_speed *= 0.9
 	clampf(player.max_speed, 125, 300)
-	player.bag_size += 0.2
+	player.bag_size += 0.4
+	get_parent().get_parent().add_money(20)
 	queue_free()

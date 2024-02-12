@@ -14,3 +14,8 @@ func _process(delta):
 
 func _on_area_2d_area_entered(area):
 	exit_reached.emit()
+
+
+func _on_area_2d_body_entered(body):
+	if body is Player:
+		body.game_over(true)

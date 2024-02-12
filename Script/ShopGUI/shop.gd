@@ -12,7 +12,7 @@ var player_page:Control
 var shop_page:Control
 
 
-var selected_item = null
+var selected_item = ""
 
 
 # Called when the node enters the scene tree for the first time.
@@ -31,9 +31,15 @@ func _ready():
 	
 	player_page.set_money(money)
 	shop_page.get_node("ShopInventoryConsumables").shop_item_pressed.connect(item_buy)
+	shop_page.get_node("ShopInventoryConsumables").select_button_pressed.connect(select_button_pressed)
 	player_page.get_node("ShopInventoryConsumables").select_button_pressed.connect(select_button_pressed)
 	player_page.new_game.connect(new_game)
-	
+
+
+func init(additional_money):
+	money += additional_money
+	player_page.set_money(money)
+	print(money)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -41,7 +47,6 @@ func _process(delta):
 
 func read_gamedata():
 	var datafile = JSON.parse_string(FileAccess.open("res://data/gamedata.json",FileAccess.READ).get_as_text())
-	print(datafile)
 	var consumables = datafile["consumable"]
 	for i in range(len(consumables)):
 		var item_dict:Dictionary = consumables[i]
@@ -50,6 +55,7 @@ func read_gamedata():
 				var data_dict = item_dict[key]
 				descriptions[key] = data_dict["descpt"]
 				prices[key] = data_dict["price"]
+	
 
 func store_gamedata():
 	var datafile = JSON.parse_string(FileAccess.open("res://data/gamedata.json",FileAccess.READ).get_as_text())
@@ -65,9 +71,10 @@ func store_gamedata():
 				
 	
 	datafile["consumable"] = consumables
+	
 
 func read_playerdata():
-	var datafile = JSON.parse_string(FileAccess.open("res://data/userdata.json",FileAccess.READ).get_as_text())
+	var datafile = JSON.parse_string(FileAccess.open("user://userdata.json",FileAccess.READ).get_as_text())
 	var inventory:Dictionary = datafile["all_time_stat"]
 	for key in inventory:
 		if key in current_shop_items:
@@ -75,9 +82,10 @@ func read_playerdata():
 	
 	var current_stats = datafile["current_stat"]
 	money = current_stats["money"]
+	selected_item = datafile["selected"]
 
 func store_playerdata():
-	var datafile = JSON.parse_string(FileAccess.open("res://data/userdata.json",FileAccess.READ).get_as_text())
+	var datafile = JSON.parse_string(FileAccess.open("user://userdata.json",FileAccess.READ).get_as_text())
 	var inventory:Dictionary = datafile["all_time_stat"]
 	for key in inventory:
 		if key in current_shop_items:
@@ -85,8 +93,9 @@ func store_playerdata():
 	datafile["all_time_stat"] = inventory
 	
 	datafile["current_stat"]["money"] = money
+	datafile["selected"] = selected_item
 	
-	FileAccess.open("res://data/userdata.json", FileAccess.WRITE).store_string ( JSON.stringify(datafile))
+	FileAccess.open("user://userdata.json", FileAccess.WRITE).store_string ( JSON.stringify(datafile))
 	
 
 
@@ -99,6 +108,7 @@ func item_buy(item_name):
 		print("already owned!")
 		return
 	
+	print("available to buy")
 	money -= prices[item_name]
 	update_money()
 	
@@ -115,6 +125,7 @@ func update_money():
 	player_page.set_money(money)
 
 func select_button_pressed(item_name):
+	print("select button pressed")
 	selected_item = item_name
 	player_page.get_node("ShopInventoryConsumables").update_select_buttons(item_name)
 

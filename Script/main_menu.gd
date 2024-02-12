@@ -5,14 +5,17 @@ var muted : bool;
 var datafile :Dictionary;
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	data_init()
 	$options.hide();$options/mute.hide();$options/stat.hide();$options/optionchoice.hide();
 	datafile = JSON.parse_string(FileAccess.open("res://data/default_userdata.json",FileAccess.READ).get_as_text())
-	FileAccess.open("res://data/userdata.json", FileAccess.WRITE).store_string(JSON.stringify(datafile))
+	FileAccess.open("user://userdata.json", FileAccess.WRITE).store_string(JSON.stringify(datafile))
 	print(error_string(FileAccess.get_open_error()))
+	
+	data_init()
+	print("created file")
+	
 
 func data_init():
-	datafile = JSON.parse_string(FileAccess.open("res://data/userdata.json",FileAccess.READ).get_as_text())
+	datafile = JSON.parse_string(FileAccess.open("user://userdata.json",FileAccess.READ).get_as_text())
 	#var datafile = JSON.parse_string(FileAccess.get_file_as_string("res://data/userdata.json"))
 	muted = datafile.setting.mute
 	
@@ -80,12 +83,12 @@ func mute(change: bool):
 			muted = false
 			get_node("options/mute").texture_normal = preload("res://Assets/nmuted.png")
 			datafile.setting.mute = false
-			FileAccess.open("res://data/userdata.json", FileAccess.WRITE).store_string ( JSON.stringify(datafile))
+			FileAccess.open("user://userdata.json", FileAccess.WRITE).store_string ( JSON.stringify(datafile))
 		else:
 			muted = true
 			get_node("options/mute").texture_normal = preload("res://Assets/muted.png")
 			datafile.setting.mute = true
-			FileAccess.open("res://data/userdata.json", FileAccess.WRITE).store_string ( JSON.stringify(datafile))
+			FileAccess.open("user://userdata.json", FileAccess.WRITE).store_string ( JSON.stringify(datafile))
 	else:
 		if(muted):
 			get_node("options/mute").texture_normal = preload("res://Assets/muted.png")

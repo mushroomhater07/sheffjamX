@@ -13,7 +13,7 @@ script = ExtResource("1_g5jon")
 [node name="Museum" parent="." instance=ExtResource("5_4a8nu")]
 
 [node name="Player" parent="." instance=ExtResource("2_76qo7")]
-position = Vector2(189, 196)
+position = Vector2(177, 959)
 
 [node name="BottomRight" parent="Player/PlayerCharacter/PlayerCamera/Limits" index="1"]
 position = Vector2(3488, 1984)
@@ -46,10 +46,10 @@ position = Vector2(2264, 980)
 position = Vector2(924, 1037)
 
 [node name="Guard9" parent="." instance=ExtResource("3_efud8")]
-position = Vector2(297, 959)
+position = Vector2(649, 956)
 
 [node name="Guard10" parent="." instance=ExtResource("3_efud8")]
-position = Vector2(248, 1670)
+position = Vector2(170, 1647)
 
 [node name="Guard11" parent="." instance=ExtResource("3_efud8")]
 position = Vector2(694, 1774)
@@ -126,24 +126,30 @@ position = Vector2(2689, 1793)
 position = Vector2(2393, 1866)
 
 [node name="Painting21" parent="Paintings" instance=ExtResource("5_36cay")]
-position = Vector2(1168, 1540)
+position = Vector2(694, 1653)
 
 [node name="Painting22" parent="Paintings" instance=ExtResource("5_36cay")]
-position = Vector2(595, 1552)
+position = Vector2(695, 1521)
 
 [node name="Painting23" parent="Paintings" instance=ExtResource("5_36cay")]
-position = Vector2(133, 1557)
+position = Vector2(702, 1390)
 
 [node name="Painting24" parent="Paintings" instance=ExtResource("5_36cay")]
 position = Vector2(164, 1875)
+
+[node name="Painting25" parent="Paintings" instance=ExtResource("5_36cay")]
+position = Vector2(414, 958)
 
 [node name="Exit" parent="." instance=ExtResource("6_ovkeg")]
 position = Vector2(3458, 896)
 rotation = 1.5708
 
-[node name="ValueLabel" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="Exit2" parent="." instance=ExtResource("6_ovkeg")]
+position = Vector2(684, 1958)
+rotation = -3.14159
+
+[node name="Exit3" parent="." instance=ExtResource("6_ovkeg")]
+position = Vector2(749, 30)
 
 [editable path="Player"]
 [editable path="Player/PlayerCharacter/PlayerCamera"]
