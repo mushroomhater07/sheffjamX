@@ -14,7 +14,9 @@ func _process(delta):
 
 
 func _on_button_pressed():
-	select_button_pressed.emit()
+	print($AnimatedSprite2D.frame)
+	if $AnimatedSprite2D.frame != 2:
+		select_button_pressed.emit()
 
 func set_frame(frame):
 	$AnimatedSprite2D.frame = frame

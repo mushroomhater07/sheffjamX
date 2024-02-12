@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://ctta1v4gpeus2"]
+[gd_scene load_steps=21 format=3 uid="uid://ctta1v4gpeus2"]
 
 [ext_resource type="Texture2D" uid="uid://0fyega4djogo" path="res://Assets/tilemap.png" id="1_af7mq"]
 [ext_resource type="Script" path="res://Script/player.gd" id="1_iim0t"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/Consumables/speed_boost.tscn" id="6_ibht0"]
 [ext_resource type="PackedScene" path="res://Scenes/Consumables/silent_shoes.tscn" id="6_xcoft"]
 [ext_resource type="Texture2D" uid="uid://bl4sohmixxewi" path="res://Assets/tile198.png" id="11_82mw7"]
+[ext_resource type="FontFile" uid="uid://bcjkq7556x8yo" path="res://Assets/ARCADECLASSIC.TTF" id="12_cchjg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7rw21"]
 atlas = ExtResource("1_af7mq")
@@ -35,6 +36,10 @@ size = Vector2(12, 16)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_eefx7"]
 radius = 24.0208
+
+[sub_resource type="LabelSettings" id="LabelSettings_f08mr"]
+font = ExtResource("12_cchjg")
+font_size = 30
 
 [sub_resource type="Animation" id="Animation_n30n4"]
 resource_name = "move"
@@ -112,6 +117,15 @@ script = ExtResource("5_u1787")
 
 [node name="GhostTimer" type="Timer" parent="PlayerCharacter"]
 wait_time = 0.1
+
+[node name="ValueLabel" type="Label" parent="PlayerCharacter"]
+offset_left = -86.0
+offset_top = -54.0
+offset_right = 87.0
+offset_bottom = -23.0
+text = "0"
+label_settings = SubResource("LabelSettings_f08mr")
+horizontal_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

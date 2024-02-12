@@ -19,6 +19,8 @@ signal stopped_sneaking
 
 var item:String
 
+var round_money:float = 0
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -53,9 +55,9 @@ func _physics_process(delta):
 		##### deceleration
 		for i in range(2):
 			if current_speed[i]>0:
-				current_speed[i] = max(0, current_speed[i]-deceleration*delta)
+				current_speed[i] = max(0, current_speed[i]-deceleration)
 			elif current_speed[i]<0:
-				current_speed[i] = min(0, current_speed[i]+deceleration*delta)
+				current_speed[i] = min(0, current_speed[i]+deceleration)
 	
 	current_speed += frame_speed_vector*acceleration*delta
 	var scalar_speed:float = current_speed.length()
@@ -87,10 +89,13 @@ func _on_ghost_timer_timeout():
 
 func _on_bag_body_entered(body):
 	game_over(false)
+	
+func update_money():
+	$ValueLabel.text = str(round_money)
 
 func game_over(victory):
 	var game_over_node = load("res://Scenes/game_over.tscn").instantiate()
-	game_over_node.init(victory)
+	game_over_node.init(victory, round_money)
 	var control_node = get_node("/root")
 	control_node.add_child(game_over_node)
 	control_node.get_node("MuseumGame").queue_free()

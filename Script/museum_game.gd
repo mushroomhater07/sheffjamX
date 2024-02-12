@@ -13,6 +13,9 @@ func _ready():
 func _process(delta):
 	pass
 
+func add_money(amount):
+	$Player/PlayerCharacter.round_money += amount
+	$Player/PlayerCharacter.update_money()
 
 func on_exit_reached():
 	player.game_over(true)
