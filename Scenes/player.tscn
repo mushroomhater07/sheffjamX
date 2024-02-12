@@ -7,9 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://c8n57cm8dalnm" path="res://Scenes/Consumables/wrench.tscn" id="4_vb147"]
 [ext_resource type="Script" path="res://Script/Consumables/ConsumableManager.gd" id="5_u1787"]
 [ext_resource type="PackedScene" uid="uid://r87ipttqo0vi" path="res://Scenes/Consumables/flash_bang.tscn" id="6_dlv4f"]
-[ext_resource type="PackedScene" uid="uid://do3ee5at0lbvs" path="res://Scenes/Consumables/lights_out.tscn" id="6_gsjt7"]
-[ext_resource type="PackedScene" uid="uid://dp2hldfgkwhpc" path="res://Scenes/Consumables/speed_boost.tscn" id="6_ibht0"]
-[ext_resource type="PackedScene" uid="uid://b6u4b2tgdvet" path="res://Scenes/Consumables/silent_shoes.tscn" id="6_xcoft"]
+[ext_resource type="PackedScene" path="res://Scenes/Consumables/lights_out.tscn" id="6_gsjt7"]
+[ext_resource type="PackedScene" path="res://Scenes/Consumables/speed_boost.tscn" id="6_ibht0"]
+[ext_resource type="PackedScene" path="res://Scenes/Consumables/silent_shoes.tscn" id="6_xcoft"]
 [ext_resource type="Texture2D" uid="uid://bl4sohmixxewi" path="res://Assets/tile198.png" id="11_82mw7"]
 [ext_resource type="FontFile" uid="uid://bcjkq7556x8yo" path="res://Assets/ARCADECLASSIC.TTF" id="12_cchjg"]
 
